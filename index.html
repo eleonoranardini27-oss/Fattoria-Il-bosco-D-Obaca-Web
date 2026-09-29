@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fattoria Il Bosco D'Obaca | Ortaggi, Frutta e Uova a Km Zero a Vellano (Pescia)</title>
+    <meta name="description" content="Il gusto genuino della Svizzera Pesciatina direttamente a casa tua. Coltiviamo ortaggi di stagione, frutta e uova fresche colorate a Vellano (Pescia).">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bosco: '#243E22', /* Verde bosco profondo e naturale */
+                        boscoDark: '#172B16',
+                        boscoLight: '#32562F',
+                        terra: '#7A4A35', /* Marrone terra calda */
+                        terraDark: '#5C3727',
+                        gialloCaldo: '#D99B26', /* Giallo caldo accogliente */
+                        gialloCaldoDark: '#B87E1B',
+                        gialloCaldoHover: '#C6871F',
+                        panna: '#F9F8F3',
+                        pannaCard: '#F3EFE6',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #F9F8F3;
+            color: #2D3748;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        /* Custom scrollbar for AI chat box */
+        .chat-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .chat-scroll::-webkit-scrollbar-track {
+            background: #F3EFE6;
+        }
+        .chat-scroll::-webkit-scrollbar-thumb {
+            background: #D99B26;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-panna text-gray-800 antialiased selection:bg-bosco selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-panna/95 backdrop-blur-md border-b border-terra/10 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-bosco/30 shadow-md group-hover:scale-105 transition-transform flex-shrink-0 bg-white">
+                    <img src="logo.jpeg" alt="Logo Fattoria Il Bosco D'Obaca" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="block font-serif font-bold text-lg sm:text-xl text-bosco tracking-wide">Fattoria Il Bosco D'Obaca</span>
+                    <span class="block text-xs text-terra font-medium tracking-widest uppercase">Vellano • Pescia</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#home" class="text-bosco font-semibold hover:text-gialloCaldoDark transition-colors">Home</a>
+                <a href="#chisiamo" class="text-gray-700 hover:text-bosco transition-colors">Chi Siamo</a>
+                <a href="#prodotti" class="text-gray-700 hover:text-bosco transition-colors">Prodotti & Futuro</a>
+                <a href="#ordina" class="text-gray-700 hover:text-bosco transition-colors">Come Acquistare</a>
+                <a href="#faq" class="text-gray-700 hover:text-bosco transition-colors">FAQ</a>
+                <a href="#contatti" class="text-gray-700 hover:text-bosco transition-colors">Contatti</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#ordina" class="bg-gialloCaldo hover:bg-gialloCaldoHover text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-gialloCaldo/20 transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-basket-shopping mr-2"></i>Ordina Cassetta
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-bosco text-2xl focus:outline-none p-2" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-panna border-b border-terra/10 px-6 pt-4 pb-6 space-y-4 shadow-xl">
+            <a href="#home" class="block font-medium text-bosco mobile-link">Home</a>
+            <a href="#chisiamo" class="block font-medium text-gray-700 mobile-link">Chi Siamo</a>
+            <a href="#prodotti" class="block font-medium text-gray-700 mobile-link">Prodotti & Futuro</a>
+            <a href="#ordina" class="block font-medium text-gray-700 mobile-link">Come Acquistare</a>
+            <a href="#faq" class="block font-medium text-gray-700 mobile-link">FAQ</a>
+            <a href="#contatti" class="block font-medium text-gray-700 mobile-link">Contatti</a>
+            <div class="pt-2">
+                <a href="#ordina" class="block text-center bg-gialloCaldo text-white px-5 py-3 rounded-xl font-semibold shadow-md mobile-link">
+                    <i class="fa-solid fa-basket-shopping mr-2"></i>Ordina Cassetta
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-gradient-to-b from-pannaCard to-panna">
+            <div class="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(#243E22_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 bg-bosco/10 text-bosco px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                            <i class="fa-solid fa-location-dot"></i> Vellano • Svizzera Pesciatina
+                        </div>
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-boscoDark leading-tight">
+                            Il gusto genuino della Svizzera Pesciatina, <span class="text-gialloCaldoDark italic">direttamente a casa tua.</span>
+                        </h1>
+                        <p class="text-lg text-gray-700 max-w-xl font-normal leading-relaxed mx-auto lg:mx-0">
+                            Coltiviamo ortaggi di stagione, frutta, more e uova fresche colorate da galline felici allevate all'aperto a Vellano.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="#ordina" class="w-full sm:w-auto bg-gialloCaldo hover:bg-gialloCaldoHover text-white px-8 py-4 rounded-full font-semibold text-center shadow-lg shadow-gialloCaldo/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                                <i class="fa-solid fa-basket-shopping"></i> Ordina la tua cassetta
+                            </a>
+                        </div>
+                        
+                        <!-- Quick trust indicators -->
+                        <div class="pt-8 grid grid-cols-3 gap-4 border-t border-terra/10 max-w-lg mx-auto lg:mx-0">
+                            <div>
+                                <span class="block font-serif font-bold text-2xl text-bosco">100%</span>
+                                <span class="text-xs text-gray-600">Naturale & Sostenibile</span>
+                            </div>
+                            <div>
+                                <span class="block font-serif font-bold text-2xl text-bosco">Km 0</span>
+                                <span class="text-xs text-gray-600">Filiera Cortissima</span>
+                            </div>
+                            <div>
+                                <span class="block font-serif font-bold text-2xl text-bosco">All'aperto</span>
+                                <span class="text-xs text-gray-600">Galline Felicissime</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -inset-4 bg-gialloCaldo/20 rounded-3xl transform rotate-3 filter blur-sm"></div>
+                            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80" alt="Orto con pacciamatura di fieno nel bosco" class="relative rounded-2xl shadow-2xl object-cover h-[420px] w-full border-4 border-white">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-terra/10 hidden sm:flex">
+                            <div class="w-12 h-12 rounded-xl bg-bosco/10 flex items-center justify-center text-bosco text-xl">
+                                <i class="fa-solid fa-seedling"></i>
+                            </div>
+                            <div>
+                                <span class="block font-serif font-bold text-bosco text-sm">Uova Fresche Colorate</span>
+                                <span class="text-xs text-gray-500">Azzurre, verdi e nocciola</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="chisiamo" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6 relative">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="Eleonora e Valentin" class="rounded-2xl shadow-md object-cover h-64 w-full">
+                            <img src="https://images.unsplash.com/photo-1592417817098-8f3d69204b56?auto=format&fit=crop&w=600&q=80" alt="Castagneto Vellano" class="rounded-2xl shadow-md object-cover h-64 w-full mt-8">
+                        </div>
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-bosco text-white p-6 rounded-2xl shadow-xl text-center hidden sm:block">
+                            <span class="block font-serif text-3xl font-bold">2</span>
+                            <span class="text-xs uppercase tracking-wider font-semibold">Fondatori Appassionati</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="inline-flex items-center gap-2 bg-terra/10 text-terra px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                            <i class="fa-solid fa-tree"></i> Chi Siamo
+                        </div>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-boscoDark leading-tight">
+                            Un progetto agricolo che stiamo costruendo con le nostre mani
+                        </h2>
+                        <p class="text-gray-700 leading-relaxed text-base">
+                            Siamo <strong>Eleonora e Valentin</strong>: viviamo e lavoriamo a Vellano, nel cuore della Svizzera Pesciatina, dove stiamo dando vita passo dopo passo alla nostra fattoria. Abbiamo scelto di costruire da zero la nostra realtà agricola, rigenerando la terra e recuperando un antico castagneto abbandonato.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed text-base">
+                            Coltiviamo il nostro orto e la nostra frutta seguendo rigorosamente i ritmi e gli equilibri della natura, adottando metodi totalmente naturali e sostenibili. Insieme alle uova fresche delle nostre galline allevate all'aria aperta, lavoriamo ogni giorno per offrirti cibi autentici, sani e coltivati in modo trasparente.
+                        </p>
+                        
+                        <div class="p-5 bg-pannaCard rounded-2xl border-l-4 border-bosco">
+                            <p class="italic font-serif text-bosco text-sm sm:text-base">
+                                "Coltiviamo l'orto seguendo i ritmi della natura, recuperiamo un antico castagneto abbandonato e alleviamo le nostre galline all'aria aperta per portarvi in ogni stagione i sapori veri, sani e genuini della nostra terra."
+                            </p>
+                            <span class="block mt-2 text-xs font-bold text-terra uppercase tracking-wider">— Eleonora & Valentin</span>
+                        </div>
+
+                        <div class="pt-4">
+                            <a href="#contatti" class="inline-flex items-center gap-2 text-bosco font-bold hover:text-gialloCaldoDark transition-colors">
+                                <i class="fa-solid fa-arrow-right"></i> Vieni a conoscerci in fattoria
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prodotti" class="py-20 bg-pannaCard">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <div class="inline-flex items-center gap-2 bg-bosco/10 text-bosco px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-carrot"></i> Dalla Terra alla Tavola
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-boscoDark">
+                        Cosa c'è Oggi in Fattoria vs. Progetti Futuri
+                    </h2>
+                    <p class="text-gray-600">
+                        Scopri le nostre produzioni attuali a km zero e guarda cosa stiamo realizzando per il futuro grazie al nostro impegno e allo sviluppo agricolo.
+                    </p>
+                </div>
+
+                <!-- Offerta Attuale Grid -->
+                <div class="mb-16">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-8 h-8 rounded-lg bg-bosco text-white flex items-center justify-center font-bold text-sm">1</div>
+                        <h3 class="font-serif text-2xl font-bold text-bosco">Offerta Attuale (Disponibile Ora)</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Card 1 -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-terra/10 hover:shadow-xl transition-all flex flex-col">
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Le Cassette dell'Orto" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-gialloCaldo text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Disponibile</span>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                                <div>
+                                    <h4 class="font-serif text-xl font-bold text-bosco mb-2">Le Cassette dell'Orto</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Ortaggi freschi di stagione coltivati con metodi totalmente naturali e sostenibili nei nostri campi a Vellano.
+                                    </p>
+                                </div>
+                                <a href="#ordina" class="text-gialloCaldoDark font-semibold text-sm inline-flex items-center gap-1 hover:underline">
+                                    Ordina la cassetta <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-terra/10 hover:shadow-xl transition-all flex flex-col">
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=600&q=80" alt="Frutta Fresca e More" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-gialloCaldo text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Disponibile</span>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                                <div>
+                                    <h4 class="font-serif text-xl font-bold text-bosco mb-2">Frutta Fresca & More</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Frutta locale di stagione e deliziose more mature raccolte direttamente dai nostri alberi e roveti nel bosco.
+                                    </p>
+                                </div>
+                                <a href="#ordina" class="text-gialloCaldoDark font-semibold text-sm inline-flex items-center gap-1 hover:underline">
+                                    Scopri il raccolto <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-terra/10 hover:shadow-xl transition-all flex flex-col">
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=600&q=80" alt="Uova Fresche Colorate" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-gialloCaldo text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Disponibile</span>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                                <div>
+                                    <h4 class="font-serif text-xl font-bold text-bosco mb-2">Uova Fresche Colorate</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Uova dal guscio azzurro/verde, marrone e nocciola prodotte da galline felici allevate all'aperto all'aria di montagna.
+                                    </p>
+                                </div>
+                                <a href="#ordina" class="text-gialloCaldoDark font-semibold text-sm inline-flex items-center gap-1 hover:underline">
+                                    Prenota uova <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progetti Futuri Grid -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-8 h-8 rounded-lg bg-terra text-white flex items-center justify-center font-bold text-sm">2</div>
+                        <h3 class="font-serif text-2xl font-bold text-terraDark">Progetti Futuri (In Cantiere - Bando di Sviluppo)</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Future Card 1 -->
+                        <div class="bg-white/85 backdrop-blur rounded-2xl p-6 sm:p-8 border-2 border-dashed border-terra/30 flex flex-col sm:flex-row gap-6 items-center">
+                            <div class="w-20 h-20 rounded-2xl bg-terra/10 flex-shrink-0 flex items-center justify-center text-terra text-3xl">
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </div>
+                            <div class="space-y-2">
+                                <span class="inline-block bg-terra/20 text-terraDark text-xs font-bold px-3 py-1 rounded-full">In Arrivo</span>
+                                <h4 class="font-serif text-xl font-bold text-bosco">La Nuova Stalla e le Caprette</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Stalla moderna pensata per il massimo benessere animale, progettata per ospitare circa 30 capre da latte in armonia con la natura di Vellano.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Future Card 2 -->
+                        <div class="bg-white/85 backdrop-blur rounded-2xl p-6 sm:p-8 border-2 border-dashed border-terra/30 flex flex-col sm:flex-row gap-6 items-center">
+                            <div class="w-20 h-20 rounded-2xl bg-terra/10 flex-shrink-0 flex items-center justify-center text-terra text-3xl">
+                                <i class="fa-solid fa-cheese"></i>
+                            </div>
+                            <div class="space-y-2">
+                                <span class="inline-block bg-terra/20 text-terraDark text-xs font-bold px-3 py-1 rounded-full">In Arrivo</span>
+                                <h4 class="font-serif text-xl font-bold text-bosco">Il Laboratorio e i Formaggi Artigianali</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Caseificio aziendale per la produzione e vendita di formaggi freschi e stagionati a filiera cortissima direttamente in fattoria.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ordina" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <div class="inline-flex items-center gap-2 bg-bosco/10 text-bosco px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-bag-shopping"></i> Guida & Ordini
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-boscoDark">
+                        Come Acquistare la Tua Cassetta Settimanale
+                    </h2>
+                    <p class="text-gray-600">
+                        Bastano 3 semplici passaggi per ricevere sulla tua tavola la genuinità dei nostri prodotti di stagione.
+                    </p>
+                </div>
+
+                <!-- 3 Steps Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+                    <div class="bg-panna p-8 rounded-2xl border border-terra/10 relative text-center">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-bosco text-white font-bold flex items-center justify-center shadow-md">1</div>
+                        <div class="text-gialloCaldoDark text-4xl mb-4 mt-2">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-bosco mb-2">Richiedi la Cassetta</h3>
+                        <p class="text-gray-600 text-sm">
+                            Consulta la nostra offerta di stagione sul sito web oppure direttamente sul nostro canale WhatsApp aggiornato.
+                        </p>
+                    </div>
+
+                    <div class="bg-panna p-8 rounded-2xl border border-terra/10 relative text-center">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-bosco text-white font-bold flex items-center justify-center shadow-md">2</div>
+                        <div class="text-gialloCaldoDark text-4xl mb-4 mt-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-bosco mb-2">Invia il Tuo Ordine</h3>
+                        <p class="text-gray-600 text-sm">
+                            Compila il modulo qui sotto oppure rispondi su WhatsApp indicando se preferisci il ritiro in fattoria o la consegna.
+                        </p>
+                    </div>
+
+                    <div class="bg-panna p-8 rounded-2xl border border-terra/10 relative text-center">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-bosco text-white font-bold flex items-center justify-center shadow-md">3</div>
+                        <div class="text-gialloCaldoDark text-4xl mb-4 mt-2">
+                            <i class="fa-solid fa-house-laptop"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-bosco mb-2">Ricevi o Ritira</h3>
+                        <p class="text-gray-600 text-sm">
+                            Passa a trovarci a Vellano in Via Obaca oppure ricevi la cassetta comoda a casa con la nostra consegna locale in zona.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Interactive Order Form & WhatsApp Option Box -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-pannaCard rounded-3xl p-8 sm:p-12 border border-terra/10 shadow-xl">
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="inline-flex items-center gap-2 bg-gialloCaldo/20 text-gialloCaldoDark px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                            <i class="fa-solid fa-bolt"></i> Modulo Rapido
+                        </div>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-bosco">
+                            Ordina la tua Cassetta della Settimana
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Compila questo modulo interattivo per inviare il tuo ordine in modo semplice. Ti contatteremo subito per confermare la disponibilità del raccolto del giorno!
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-bosco text-white flex items-center justify-center flex-shrink-0 text-xs mt-0.5">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p class="text-sm text-gray-700"><strong>Nessun vincolo o abbonamento:</strong> ordini solo quando ne hai bisogno.</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-bosco text-white flex items-center justify-center flex-shrink-0 text-xs mt-0.5">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p class="text-sm text-gray-700"><strong>Pagamento flessibile:</strong> in contanti o digitale (Satispay/POS) al ritiro o alla consegna.</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <a href="https://wa.me/393000000000?text=Ciao%2C%20vorrei%20ordinare%20la%20cassetta%20della%20settimana!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white px-6 py-3.5 rounded-full font-bold text-sm shadow-lg shadow-[#25D366]/20 transition-all">
+                                <i class="fa-brands fa-whatsapp text-xl"></i> Oppure scrivici su WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6">
+                        <form id="order-form" class="bg-white p-6 sm:p-8 rounded-2xl shadow-md space-y-4">
+                            <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-800 p-4 rounded-xl text-sm mb-4">
+                                <i class="fa-solid fa-circle-check mr-2"></i><strong>Ordine inviato con successo!</strong> Eleonora e Valentin ti risponderanno al più presto.
+                            </div>
+
+                            <div>
+                                <label for="nome" class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Nome e Cognome *</label>
+                                <input type="text" id="nome" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-bosco text-sm bg-gray-50">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="telefono" class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Telefono / WhatsApp *</label>
+                                    <input type="tel" id="telefono" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-bosco text-sm bg-gray-50">
+                                </div>
+                                <div>
+                                    <label for="modalita" class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Modalità *</label>
+                                    <select id="modalita" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-bosco text-sm bg-gray-50">
+                                        <option value="Ritiro in fattoria (Vellano)">Ritiro in fattoria a Vellano</option>
+                                        <option value="Consegna a domicilio in zona">Consegna a domicilio in zona</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="note" class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Note o preferenze (es. allergie, uova extra)</label>
+                                <textarea id="note" rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-bosco text-sm bg-gray-50" placeholder="Es. Vorrei aggiungere un extra di uova o segnalare preferenze..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gialloCaldo hover:bg-gialloCaldoHover text-white py-4 rounded-xl font-bold text-sm shadow-md transition-all">
+                                <i class="fa-solid fa-paper-plane mr-2"></i> Invia Ordine Rapido
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div id="faq" class="mt-20">
+                    <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                        <div class="inline-flex items-center gap-2 bg-bosco/10 text-bosco px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                            <i class="fa-solid fa-circle-question"></i> Domande Frequenti
+                        </div>
+                        <h3 class="font-serif text-3xl font-bold text-boscoDark">
+                            Dubbi o Curiosità?
+                        </h3>
+                        <p class="text-gray-600 text-sm">
+                            Le risposte alle domande più frequenti sui nostri prodotti, cassette e formaggi futuri.
+                        </p>
+                    </div>
+
+                    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- FAQ Item -->
+                        <div class="bg-panna p-6 rounded-2xl border border-terra/10 space-y-2">
+                            <h4 class="font-serif font-bold text-bosco text-base flex items-start gap-2">
+                                <i class="fa-solid fa-circle-question text-gialloCaldoDark mt-1"></i> Posso personalizzare la cassetta?
+                            </h4>
+                            <p class="text-gray-600 text-sm pl-6 leading-relaxed">
+                                La cassetta contiene il meglio del raccolto di stagione. Per allergie o preferenze particolari, segnalalo nelle note: faremo il possibile per venire incontro alle tue esigenze!
+                            </p>
+                        </div>
+
+                        <!-- FAQ Item -->
+                        <div class="bg-panna p-6 rounded-2xl border border-terra/10 space-y-2">
+                            <h4 class="font-serif font-bold text-bosco text-base flex items-start gap-2">
+                                <i class="fa-solid fa-circle-question text-gialloCaldoDark mt-1"></i> C'è un vincolo o abbonamento?
+                            </h4>
+                            <p class="text-gray-600 text-sm pl-6 leading-relaxed">
+                                Nessun vincolo: ordini la tua cassetta solo quando ne hai bisogno e desideri gustare i prodotti freschi dell'orto.
+                            </p>
+                        </div>
+
+                        <!-- FAQ Item -->
+                        <div class="bg-panna p-6 rounded-2xl border border-terra/10 space-y-2">
+                            <h4 class="font-serif font-bold text-bosco text-base flex items-start gap-2">
+                                <i class="fa-solid fa-circle-question text-gialloCaldoDark mt-1"></i> Come posso pagare?
+                            </h4>
+                            <p class="text-gray-600 text-sm pl-6 leading-relaxed">
+                                In contanti o tramite pagamento digitale (Satispay/POS) comodamente al ritiro in fattoria o alla consegna in zona.
+                            </p>
+                        </div>
+
+                        <!-- FAQ Item -->
+                        <div class="bg-panna p-6 rounded-2xl border border-terra/10 space-y-2">
+                            <h4 class="font-serif font-bold text-bosco text-base flex items-start gap-2">
+                                <i class="fa-solid fa-circle-question text-gialloCaldoDark mt-1"></i> Quando saranno pronti i formaggi?
+                            </h4>
+                            <p class="text-gray-600 text-sm pl-6 leading-relaxed">
+                                Non appena completata la stalla e l'allestimento del laboratorio aziendale previsto dal bando di sviluppo. Iscriviti al nostro canale WhatsApp per seguire i lavori!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contatti" class="py-20 bg-pannaCard">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start justify-center">
+                    <div class="lg:col-span-8 space-y-6 mx-auto text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 bg-bosco/10 text-bosco px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                            <i class="fa-solid fa-envelope"></i> Contatti & Social
+                        </div>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-boscoDark">
+                            Passa a trovarci o seguici sui Social!
+                        </h2>
+                        <p class="text-gray-700 leading-relaxed text-base max-w-2xl">
+                            La nostra fattoria si trova a <strong>Vellano, in Via Obaca</strong>, tra le colline della Svizzera Pesciatina. Che tu voglia prenotare la tua cassetta dell'orto, concordare il ritiro della spesa o organizzare una visita, siamo sempre felici di accoglierti!
+                        </p>
+
+                        <div class="space-y-4 pt-4 max-w-xl">
+                            <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-terra/10 text-left">
+                                <div class="w-12 h-12 rounded-xl bg-bosco/10 flex items-center justify-center text-bosco text-xl flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-gray-500 uppercase font-semibold">Indirizzo Fattoria</span>
+                                    <span class="font-bold text-bosco text-sm sm:text-base">Via Obaca 4, 51012 Vellano - Pescia (PT)</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-terra/10 text-left">
+                                <div class="w-12 h-12 rounded-xl bg-[#25D366]/10 flex items-center justify-center text-[#25D366] text-xl flex-shrink-0">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-gray-500 uppercase font-semibold">WhatsApp & Canale</span>
+                                    <a href="https://wa.me/393000000000" target="_blank" class="font-bold text-gray-800 text-sm sm:text-base hover:text-[#25D366]">Scrivici subito un messaggio veloce</a>
+                                </div>
+                            </div>
+
+                            <!-- Social Links Row -->
+                            <div class="pt-2">
+                                <span class="block text-xs text-gray-500 uppercase font-semibold mb-3">Seguici sui nostri canali social</span>
+                                <div class="flex items-center gap-4">
+                                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white px-5 py-3 rounded-xl font-bold text-sm shadow-md hover:opacity-95 transition-all">
+                                        <i class="fa-brands fa-instagram text-lg"></i> Instagram
+                                    </a>
+                                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#1877F2] text-white px-5 py-3 rounded-xl font-bold text-sm shadow-md hover:bg-[#166fe5] transition-all">
+                                        <i class="fa-brands fa-facebook text-lg"></i> Facebook
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-boscoDark text-white pt-16 pb-12 border-t border-bosco">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-6 space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full overflow-hidden bg-white flex items-center justify-center">
+                            <img src="logo.jpeg" alt="Logo" class="w-full h-full object-cover">
+                        </div>
+                        <span class="font-serif text-2xl font-bold tracking-wide">Fattoria Il Bosco D'Obaca</span>
+                    </div>
+                    <p class="text-gray-300 text-sm max-w-md leading-relaxed">
+                        Via Obaca 4, Vellano • Pescia (PT) | P.IVA 02138000472
+                    </p>
+                </div>
+
+                <div class="md:col-span-6 flex flex-wrap md:justify-end gap-6 text-sm">
+                    <a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                    <a href="#chisiamo" class="text-gray-300 hover:text-white transition-colors">Chi Siamo</a>
+                    <a href="#prodotti" class="text-gray-300 hover:text-white transition-colors">Prodotti</a>
+                    <a href="#ordina" class="text-gray-300 hover:text-white transition-colors">Come Acquistare</a>
+                    <a href="#contatti" class="text-gray-300 hover:text-white transition-colors">Contatti</a>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
+                <p>&copy; 2026 Fattoria Il Bosco D'Obaca - Tutti i diritti riservati.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook text-lg"></i></a>
+                    <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Order Form Submission Simulation
+        const orderForm = document.getElementById('order-form');
+        const formSuccess = document.getElementById('form-success');
+
+        orderForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formSuccess.classList.remove('hidden');
+            orderForm.reset();
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 6000);
+        });
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
