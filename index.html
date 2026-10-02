@@ -137,8 +137,9 @@
         .pratica-head h2 { font-size: clamp(2rem, 4vw, 2.8rem); color: var(--bosco); }
         .pratica-testo { flex: 1 1 520px; display: flex; flex-direction: column; gap: 16px; font-size: 17px; }
         .pratica-grid { display: flex; flex-wrap: wrap; gap: 28px; }
-        .pratica-card { flex: 1 1 300px; background: #F6F0E4; border: 1px solid var(--terra); padding: 32px 30px; display: flex; flex-direction: column; gap: 12px; }
+        .pratica-card { flex: 1 1 300px; background: #F6F0E4; border: 1px solid var(--terra); padding: 36px 30px; display: flex; flex-direction: column; gap: 12px; }
         .pratica-card h3, .animale h3 { font-size: 28px; color: var(--bosco); }
+        .animale p { font-size: 15px; }
         .pratica-card p, .animale p { font-size: 16px; }
         .tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); }
         .galleria { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; }
@@ -148,7 +149,11 @@
         .galleria .piccole img { height: 100%; min-height: 0; }
         .on-paglia { background: #E3D8C2; border-top: 1px solid var(--terra); }
         .animali-grid { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 48px; }
-        .animale { flex: 1 1 320px; background: var(--carta); border: 1px solid var(--terra); padding: 32px 30px; display: flex; flex-direction: column; gap: 12px; }
+        .animale { flex: 1 1 320px; display: flex; flex-direction: column; gap: 14px; }
+        .segnaposto { display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; font-size: 13px; color: var(--inchiostro); border: 1px solid var(--terra); }
+        .pratica-foto { height: 220px; margin: -36px -30px 8px; border-width: 0 0 1px; }
+        .animale-foto { height: 300px; }
+        .dettagli { border-top: 1px solid rgba(110,75,46,0.35); padding-top: 14px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-style: italic; color: var(--terra); }
         .nota { margin: 40px auto 0; text-align: center; font-size: 15px; font-style: italic; color: var(--terra); max-width: 720px; }
 
         /* ---------- PRODOTTI ---------- */
@@ -473,19 +478,25 @@
                 </div>
                 <div class="pratica-grid">
                     <div class="pratica-card">
+                        <div class="segnaposto pratica-foto" style="background: #C9B48E">[Foto: l'orto, la terra lavorata]</div>
                         <span class="tag">Nell'orto</span>
                         <h3>La terra prima del raccolto</h3>
                         <p>Coltiviamo ortaggi di stagione con metodi naturali, seguendo i ritmi e gli equilibri della natura.</p>
+                        <div class="dettagli"><span>[Come nutrite la terra: es. compost, sovescio, letame delle vostre galline]</span><span>[Come gestite erbe e parassiti]</span><span>[Cosa scegliete di non usare]</span></div>
                     </div>
                     <div class="pratica-card">
+                        <div class="segnaposto pratica-foto" style="background: #B9A988">[Foto: gli animali all'aperto]</div>
                         <span class="tag">Con gli animali</span>
                         <h3>Spazio, aria, tempo</h3>
                         <p>Le nostre galline vivono all'aperto e la futura stalla sarà progettata per il benessere delle capre.</p>
+                        <div class="dettagli"><span>[Quanto spazio hanno e come passano la giornata]</span><span>[Cosa mangiano]</span></div>
                     </div>
                     <div class="pratica-card">
+                        <div class="segnaposto pratica-foto" style="background: #A8987A">[Foto: il castagneto, i lavori in corso]</div>
                         <span class="tag">Nel bosco</span>
                         <h3>Recuperare, non sfruttare</h3>
                         <p>Stiamo riportando in vita un antico castagneto abbandonato, un albero alla volta.</p>
+                        <div class="dettagli"><span>[Cosa state facendo adesso: pulizia, potature, sentieri]</span><span>[Cosa sognate che diventi]</span></div>
                     </div>
                 </div>
                 <div class="galleria">
@@ -510,17 +521,43 @@
                 </div>
                 <div class="animali-grid">
                     <article class="animale">
+                        <div class="segnaposto animale-foto" style="background: #C9B48E">[Foto: le galline che razzolano nel prato]</div>
                         <span class="tag">Il pollaio</span>
                         <h3>Le galline</h3>
-                        <p>Una ventina di galline di razze diverse, che depongono uova azzurre, verdi, marroni e nocciola. Passano le giornate all'aperto, all'aria di montagna.</p>
+                        <p>Una ventina di galline di razze diverse, che depongono uova azzurre, verdi, marroni e nocciola. Passano le giornate all'aperto, all'aria di montagna. [Razze e qualche "carattere" del gruppo]</p>
                     </article>
                     <article class="animale">
+                        <div class="segnaposto animale-foto" style="background: #B9A988">[Foto: la prima capra]</div>
                         <span class="tag">Allevamento familiare</span>
-                        <h3>Le capre</h3>
-                        <p>Due capre in allevamento familiare: saranno tra le prime abitanti della nuova stalla, dove nascerà il nostro allevamento.</p>
+                        <h3>[Nome capra 1]</h3>
+                        <p>[Due righe sul suo carattere: chi è la più curiosa, la più golosa, la capobranco…] Sarà tra le prime abitanti della nuova stalla.</p>
+                    </article>
+                    <article class="animale">
+                        <div class="segnaposto animale-foto" style="background: #A8987A">[Foto: la seconda capra]</div>
+                        <span class="tag">Allevamento familiare</span>
+                        <h3>[Nome capra 2]</h3>
+                        <p>[Due righe sul suo carattere] Insieme a [Nome capra 1] aspetta la nuova stalla, dove nascerà il nostro allevamento.</p>
+                    </article>
+                    <article class="animale">
+                        <div class="segnaposto animale-foto" style="background: #D2C4A6">[Foto: altri animali della fattoria]</div>
+                        <span class="tag">La famiglia</span>
+                        <h3>[Altri animali]</h3>
+                        <p>[Se avete cane, gatti o altri animali, presentateli qui. Altrimenti questo riquadro si toglie.]</p>
+                    </article>
+                    <article class="animale">
+                        <div class="segnaposto animale-foto" style="background: #C2B08C">[Foto: animale 5]</div>
+                        <span class="tag">[Ruolo in fattoria]</span>
+                        <h3>[Nome animale 5]</h3>
+                        <p>[Due righe su chi è e cosa fa in fattoria]</p>
+                    </article>
+                    <article class="animale">
+                        <div class="segnaposto animale-foto" style="background: #B3A27F">[Foto: animale 6]</div>
+                        <span class="tag">[Ruolo in fattoria]</span>
+                        <h3>[Nome animale 6]</h3>
+                        <p>[Due righe su chi è e cosa fa in fattoria]</p>
                     </article>
                 </div>
-                <p class="nota">Latte e formaggi arriveranno con la nuova stalla e il laboratorio aziendale.</p>
+                <p class="nota">Le nostre due capre oggi sono in allevamento familiare: latte e formaggi arriveranno con la nuova stalla e il laboratorio aziendale.</p>
             </div>
         </section>
 
