@@ -132,8 +132,30 @@
         .principi strong { font-family: var(--serif); font-size: 25px; color: var(--bosco); font-weight: 600; }
         .principi span:last-child { font-size: 15px; }
 
+        .pratica-head { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; margin-bottom: 48px; }
+        .pratica-head > div:first-child { flex: 1 1 340px; display: flex; flex-direction: column; gap: 14px; }
+        .pratica-head h2 { font-size: clamp(2rem, 4vw, 2.8rem); color: var(--bosco); }
+        .pratica-testo { flex: 1 1 520px; display: flex; flex-direction: column; gap: 16px; font-size: 17px; }
+        .pratica-grid { display: flex; flex-wrap: wrap; gap: 28px; }
+        .pratica-card { flex: 1 1 300px; background: #F6F0E4; border: 1px solid var(--terra); padding: 32px 30px; display: flex; flex-direction: column; gap: 12px; }
+        .pratica-card h3, .animale h3 { font-size: 28px; color: var(--bosco); }
+        .pratica-card p, .animale p { font-size: 16px; }
+        .tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); }
+        .galleria { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; }
+        .galleria img { object-fit: cover; border: 1px solid var(--terra); width: 100%; }
+        .galleria .grande { flex: 2 1 420px; width: auto; height: 420px; min-width: 0; }
+        .galleria .piccole { flex: 1 1 260px; display: grid; grid-template-rows: 1fr 1fr; gap: 16px; height: 420px; }
+        .galleria .piccole img { height: 100%; min-height: 0; }
+        .on-paglia { background: #E3D8C2; border-top: 1px solid var(--terra); }
+        .animali-grid { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 48px; }
+        .animale { flex: 1 1 320px; background: var(--carta); border: 1px solid var(--terra); padding: 32px 30px; display: flex; flex-direction: column; gap: 12px; }
+        .nota { margin: 40px auto 0; text-align: center; font-size: 15px; font-style: italic; color: var(--terra); max-width: 720px; }
+
         /* ---------- PRODOTTI ---------- */
         .on-dark { background: var(--bosco); color: var(--carta); }
+        .on-paglia .split-head { border-bottom-color: var(--terra); margin-bottom: 0; }
+        .on-paglia .split-head p { color: var(--inchiostro); }
+        .on-paglia .split-head h2 { color: var(--bosco); }
         .on-dark a:not(.btn) { color: var(--carta); }
         .split-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px;
                       border-bottom: 1px solid rgba(237,228,211,0.4); padding-bottom: 28px; margin-bottom: 56px; }
@@ -145,7 +167,7 @@
         .prodotto .foto img { width: 100%; height: 100%; object-fit: cover; }
         .badge { position: absolute; top: 14px; right: 14px; background: var(--carta); color: var(--bosco);
                  font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600; padding: 6px 12px; }
-        .prodotto .tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--oro); }
+        .prodotto .tag { color: var(--oro); }
         .prodotto h4 { font-size: 30px; }
         .prodotto p { font-size: 15px; color: var(--sabbia); }
         .prodotto .link { border-top: 1px solid rgba(237,228,211,0.3); padding-top: 12px; font-size: 14px; font-style: italic; text-decoration: none; }
@@ -258,6 +280,9 @@
             .hero p { font-size: 16px; }
             .hero-facts div + div, .principi div + div { border-left: 0; border-top: 1px solid rgba(110,75,46,0.35); }
             .prodotto .foto { height: 260px; }
+            .galleria .grande { height: 260px; flex-basis: 100%; }
+            .galleria .piccole { height: auto; grid-template-rows: none; grid-template-columns: 1fr 1fr; }
+            .galleria .piccole img { height: 200px; }
             .azienda-foto img { height: 260px; }
             .azienda-foto .grid2 img:last-child { margin-top: 24px; }
             .ordine { padding: 28px 18px; }
@@ -377,6 +402,7 @@
                     <a href="#chisiamo">Chi siamo</a>
                     <a href="#prodotti">Prodotti</a>
                     <a href="#filosofia">Filosofia</a>
+                    <a href="#animali">Animali</a>
                 </nav>
                 <a href="#home" class="brand">
                     <img src="logo.jpeg" alt="Logo Fattoria Il Bosco D'Obaca">
@@ -399,6 +425,7 @@
                 <a href="#chisiamo" class="mobile-link">Chi siamo</a>
                 <a href="#prodotti" class="mobile-link">Prodotti</a>
                 <a href="#filosofia" class="mobile-link">Filosofia</a>
+                <a href="#animali" class="mobile-link">Animali</a>
                 <a href="#ordina" class="mobile-link">Come ordinare</a>
                 <a href="#faq" class="mobile-link">FAQ</a>
                 <a href="#contatti" class="mobile-link">Contatti</a>
@@ -431,21 +458,69 @@
             </div>
         </section>
 
-        <!-- FILOSOFIA -->
+        <!-- FILOSOFIA IN PRATICA -->
         <section id="filosofia" class="section">
             <div class="wrap">
-                <div class="center-head">
-                    <span class="eyebrow">La nostra filosofia</span>
-                    <div class="divider" aria-hidden="true"><span></span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M12 2c-5 5-7 10-7 14a7 7 0 0 0 14 0c0-4-2-9-7-14z"></path><path d="M12 7v15"></path></svg><span></span></div>
-                    <h2>Non forziamo la terra: <em>la ascoltiamo.</em></h2>
-                    <p>Abbiamo scelto di costruire la nostra azienda da zero, rigenerando il suolo e recuperando un antico castagneto abbandonato. Ogni prodotto nasce dal rispetto dei ritmi e degli equilibri naturali di Vellano.</p>
+                <div class="pratica-head">
+                    <div>
+                        <span class="eyebrow">La filosofia, in pratica</span>
+                        <h2>Cosa vuol dire, per noi, rispettare la natura</h2>
+                    </div>
+                    <div class="pratica-testo">
+                        <p>Vuol dire accettare che sia la terra a dettare i tempi, e non il contrario. Coltiviamo quello che la stagione permette, lasciamo agli animali lo spazio e i ritmi di cui hanno bisogno, e ci prendiamo cura del bosco che ci circonda invece di sfruttarlo.</p>
+                        <p>È una scelta che a volte significa produrre meno. Ma è l'unico modo che conosciamo per lasciare questa terra più fertile di come l'abbiamo trovata.</p>
+                    </div>
                 </div>
-                <div class="principi">
-                    <div><span class="num">I</span><strong>Stagionalità</strong><span>Raccogliamo solo ciò che la terra offre in quel momento dell'anno.</span></div>
-                    <div><span class="num">II</span><strong>Rigenerazione</strong><span>Recuperiamo terreni e boschi abbandonati, restituendo loro vita e fertilità.</span></div>
-                    <div><span class="num">III</span><strong>Benessere animale</strong><span>Galline allevate all'aperto e, presto, una stalla progettata per le capre.</span></div>
-                    <div><span class="num">IV</span><strong>Filiera cortissima</strong><span>Dal campo alla tua tavola, senza intermediari.</span></div>
+                <div class="pratica-grid">
+                    <div class="pratica-card">
+                        <span class="tag">Nell'orto</span>
+                        <h3>La terra prima del raccolto</h3>
+                        <p>Coltiviamo ortaggi di stagione con metodi naturali, seguendo i ritmi e gli equilibri della natura.</p>
+                    </div>
+                    <div class="pratica-card">
+                        <span class="tag">Con gli animali</span>
+                        <h3>Spazio, aria, tempo</h3>
+                        <p>Le nostre galline vivono all'aperto e la futura stalla sarà progettata per il benessere delle capre.</p>
+                    </div>
+                    <div class="pratica-card">
+                        <span class="tag">Nel bosco</span>
+                        <h3>Recuperare, non sfruttare</h3>
+                        <p>Stiamo riportando in vita un antico castagneto abbandonato, un albero alla volta.</p>
+                    </div>
                 </div>
+                <div class="galleria">
+                    <img class="grande" src="immagini%20sito/orto%20con%20pacciamatura.jpeg" alt="Orto della fattoria a Vellano con file di ortaggi e pacciamatura di fieno">
+                    <div class="piccole">
+                        <img src="immagini%20sito/ciliege.JPG" alt="Cesti di ciliegie appena raccolte alla Fattoria Il Bosco D'Obaca">
+                        <img src="immagini%20sito/verdure.JPG" alt="Zucche, cavolo nero e peperoni del raccolto di stagione">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANIMALI -->
+        <section id="animali" class="section on-paglia">
+            <div class="wrap">
+                <div class="split-head">
+                    <div>
+                        <span class="eyebrow">Chi vive in fattoria</span>
+                        <h2>I nostri animali</h2>
+                    </div>
+                    <p>Non sono numeri di un allevamento: li conosciamo uno per uno, e il loro benessere viene prima della produzione.</p>
+                </div>
+                <div class="animali-grid">
+                    <article class="animale">
+                        <span class="tag">Il pollaio</span>
+                        <h3>Le galline</h3>
+                        <p>Una ventina di galline di razze diverse, che depongono uova azzurre, verdi, marroni e nocciola. Passano le giornate all'aperto, all'aria di montagna.</p>
+                    </article>
+                    <article class="animale">
+                        <span class="tag">Allevamento familiare</span>
+                        <h3>Le capre</h3>
+                        <p>Due capre in allevamento familiare: saranno tra le prime abitanti della nuova stalla, dove nascerà il nostro allevamento.</p>
+                    </article>
+                </div>
+                <p class="nota">Latte e formaggi arriveranno con la nuova stalla e il laboratorio aziendale.</p>
             </div>
         </section>
 
@@ -533,7 +608,7 @@
                     <p>Coltiviamo il nostro orto e la nostra frutta seguendo rigorosamente i ritmi e gli equilibri della natura, adottando metodi totalmente naturali e sostenibili. Insieme alle uova fresche delle nostre galline allevate all'aria aperta, lavoriamo ogni giorno per offrirti cibi autentici, sani e coltivati in modo trasparente.</p>
                     <blockquote>"Coltiviamo l'orto seguendo i ritmi della natura, recuperiamo un antico castagneto abbandonato e alleviamo le nostre galline all'aria aperta per portarvi in ogni stagione i sapori veri, sani e genuini della nostra terra."<cite>— Eleonora &amp; Valentin</cite></blockquote>
                     <div class="registro">
-                        <div><span>Castagneto recuperato</span><span>Fatto</span></div>
+                        <div><span>Recupero del castagneto</span><span>In corso</span></div>
                         <div><span>Orto e pollaio</span><span>Attivi</span></div>
                         <div><span>Stalla per 30 capre da latte</span><span>In progetto</span></div>
                         <div><span>Caseificio aziendale</span><span>In progetto</span></div>
