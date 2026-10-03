@@ -186,7 +186,8 @@
         .azienda { display: flex; flex-wrap: wrap; gap: 64px; align-items: center; }
         .azienda-foto { flex: 1 1 420px; display: flex; flex-direction: column; gap: 14px; }
         .azienda-foto .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-        .azienda-foto img { width: 100%; height: 480px; object-fit: cover; border: 1px solid var(--terra); }
+        .azienda-foto img { width: 100%; height: 400px; object-fit: cover; border: 1px solid var(--terra); }
+        .azienda-foto img.azienda-coppia { height: 320px; object-position: center 30%; }
         .azienda-foto .grid2 img:last-child { margin-top: 48px; }
         .azienda-foto figcaption { font-size: 13px; font-style: italic; color: var(--terra); }
         .azienda-testo { flex: 1 1 440px; display: flex; flex-direction: column; gap: 20px; }
@@ -283,6 +284,7 @@
             .galleria .piccole { height: auto; grid-template-rows: none; grid-template-columns: 1fr 1fr; }
             .galleria .piccole img { height: 200px; }
             .azienda-foto img { height: 260px; }
+            .azienda-foto img.azienda-coppia { height: 220px; }
             .azienda-foto .grid2 img:last-child { margin-top: 24px; }
             .ordine { padding: 28px 18px; }
             .campi2, .faq-grid { grid-template-columns: 1fr; }
@@ -456,11 +458,12 @@
         <section id="chisiamo" class="section">
             <div class="wrap azienda">
                 <figure class="azienda-foto" style="margin: 0">
+                    <img class="azienda-coppia" src="immagini%20sito/eleonora%20e%20valentin.jpg" alt="Eleonora e Valentin sorridenti con in braccio una gallina e un gallo della fattoria">
                     <div class="grid2">
-                        <img src="immagini%20sito/vista%20azienda.jpeg" alt="Prato e alberi della Fattoria Il Bosco D'Obaca a Vellano al tramonto">
-                        <img src="immagini%20sito/vista%20azienda%202.jpeg" alt="Vista dalla fattoria sulle colline e sui borghi della Svizzera Pesciatina">
+                        <img src="immagini%20sito/eleonora%20orto.jpg" alt="Eleonora controlla i cavoli nell'orto pacciamato sotto la rete">
+                        <img src="immagini%20sito/valentin%20capra.jpg" alt="Valentin accarezza una delle capre della fattoria">
                     </div>
-                    <figcaption>La fattoria in Via Obaca, Vellano</figcaption>
+                    <figcaption>Eleonora e Valentin in fattoria, Via Obaca, Vellano</figcaption>
                 </figure>
                 <div class="azienda-testo">
                     <span class="eyebrow">Chi siamo</span>
