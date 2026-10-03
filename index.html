@@ -140,7 +140,8 @@
         .galleria { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; }
         .galleria img { object-fit: cover; border: 1px solid var(--terra); width: 100%; }
         .galleria .grande { flex: 2 1 420px; width: auto; height: 420px; min-width: 0; }
-        .galleria .piccole { flex: 1 1 260px; display: grid; grid-template-rows: 1fr 1fr; gap: 16px; height: 420px; }
+        .galleria .piccole { flex: 1 1 260px; display: grid; grid-template-rows: 1fr 1fr; grid-template-columns: 1fr 1fr; gap: 16px; height: 420px; }
+        .galleria .piccole .alta { grid-row: span 2; }
         .galleria .piccole img { height: 100%; min-height: 0; }
         .on-paglia { background: #E3D8C2; border-top: 1px solid var(--terra); }
         .animali-grid { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 48px; }
@@ -283,6 +284,7 @@
             .prodotto .foto { height: 260px; }
             .galleria .grande { height: 260px; flex-basis: 100%; }
             .galleria .piccole { height: auto; grid-template-rows: none; grid-template-columns: 1fr 1fr; }
+            .galleria .piccole .alta { height: 416px; }
             .galleria .piccole img { height: 200px; }
             .azienda-foto img { height: 260px; }
             .azienda-foto img.azienda-coppia { height: 220px; }
@@ -518,10 +520,11 @@
                     </div>
                 </div>
                 <div class="galleria">
-                    <img class="grande" src="immagini%20sito/orto%20con%20pacciamatura.jpeg" alt="Orto della fattoria a Vellano con file di ortaggi e pacciamatura di fieno">
+                    <img class="grande" src="immagini%20sito/orto%20pomodori.jpg" alt="Le file di pomodori dell'orto con le colline della Svizzera Pesciatina sullo sfondo">
                     <div class="piccole">
-                        <img src="immagini%20sito/ciliege.JPG" alt="Cesti di ciliegie appena raccolte alla Fattoria Il Bosco D'Obaca">
-                        <img src="immagini%20sito/verdure.JPG" alt="Zucche, cavolo nero e peperoni del raccolto di stagione">
+                        <img class="alta" src="immagini%20sito/pomodori.jpg" alt="Pomodori allungati che maturano sulla pianta">
+                        <img src="immagini%20sito/insalata.jpg" alt="Cespo di lattuga nell'orto pacciamato con fieno">
+                        <img src="immagini%20sito/castagne%20raccolte.jpg" alt="Una manciata di castagne appena raccolte nel castagneto">
                     </div>
                 </div>
             </div>
