@@ -147,6 +147,7 @@
         .animale { flex: 1 1 320px; display: flex; flex-direction: column; gap: 14px; }
         .segnaposto { display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; font-size: 13px; color: var(--inchiostro); border: 1px solid var(--terra); }
         .pratica-foto { height: 220px; margin: -36px -30px 8px; border-width: 0 0 1px; }
+        img.pratica-foto { display: block; width: calc(100% + 60px); max-width: none; object-fit: cover; border-bottom: 1px solid var(--terra); }
         .animale-foto { height: 300px; }
         .dettagli { border-top: 1px solid rgba(110,75,46,0.35); padding-top: 14px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-style: italic; color: var(--terra); }
         .nota { margin: 40px auto 0; text-align: center; font-size: 15px; font-style: italic; color: var(--terra); max-width: 720px; }
@@ -495,21 +496,21 @@
                 </div>
                 <div class="pratica-grid">
                     <div class="pratica-card">
-                        <div class="segnaposto pratica-foto" style="background: #C9B48E">[Foto: l'orto, la terra lavorata]</div>
+                        <img class="pratica-foto" src="immagini%20sito/orto%20cavoli.jpg" alt="File di cavoli nell'orto pacciamato con paglia, sotto la rete di protezione">
                         <span class="tag">Nell'orto</span>
                         <h3>La terra prima del raccolto</h3>
                         <p>Coltiviamo ortaggi di stagione con metodi naturali, seguendo i ritmi e gli equilibri della natura.</p>
                         <div class="dettagli"><span>[Come nutrite la terra: es. compost, sovescio, letame delle vostre galline]</span><span>[Come gestite erbe e parassiti]</span><span>[Cosa scegliete di non usare]</span></div>
                     </div>
                     <div class="pratica-card">
-                        <div class="segnaposto pratica-foto" style="background: #B9A988">[Foto: gli animali all'aperto]</div>
+                        <img class="pratica-foto" src="immagini%20sito/capre%20pascolo.jpg" alt="Le nostre capre al pascolo sul prato ai margini del bosco">
                         <span class="tag">Con gli animali</span>
                         <h3>Spazio, aria, tempo</h3>
                         <p>Le nostre galline vivono all'aperto e la futura stalla sarà progettata per il benessere delle capre.</p>
                         <div class="dettagli"><span>[Quanto spazio hanno e come passano la giornata]</span><span>[Cosa mangiano]</span></div>
                     </div>
                     <div class="pratica-card">
-                        <div class="segnaposto pratica-foto" style="background: #A8987A">[Foto: il castagneto, i lavori in corso]</div>
+                        <img class="pratica-foto" src="immagini%20sito/castagne.jpg" alt="Ricci aperti con castagne mature sui rami del castagneto">
                         <span class="tag">Nel bosco</span>
                         <h3>Recuperare, non sfruttare</h3>
                         <p>Stiamo riportando in vita un antico castagneto abbandonato, un albero alla volta.</p>
