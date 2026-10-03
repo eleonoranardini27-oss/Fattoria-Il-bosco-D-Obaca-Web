@@ -151,6 +151,9 @@
         img.pratica-foto { display: block; width: calc(100% + 60px); max-width: none; object-fit: cover; border-bottom: 1px solid var(--terra); }
         .animale-foto { height: 300px; }
         img.animale-foto { display: block; width: 100%; object-fit: cover; border: 1px solid var(--terra); }
+        .foto-intera { position: relative; overflow: hidden; border: 1px solid var(--terra); }
+        .foto-intera::before { content: ""; position: absolute; inset: -20px; background: var(--sfondo) center / cover; filter: blur(14px) brightness(0.85); }
+        .foto-intera img { position: relative; display: block; width: 100%; height: 100%; object-fit: contain; }
         .dettagli { border-top: 1px solid rgba(110,75,46,0.35); padding-top: 14px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-style: italic; color: var(--terra); }
         .nota { margin: 40px auto 0; text-align: center; font-size: 15px; font-style: italic; color: var(--terra); max-width: 720px; }
 
@@ -561,7 +564,9 @@
                         <p>[Due righe sul suo carattere] Insieme a [Nome capra 1] aspetta la nuova stalla, dove nascerà il nostro allevamento.</p>
                     </article>
                     <article class="animale">
-                        <img class="animale-foto" src="immagini%20sito/gatti.jpg" alt="I due gatti della fattoria arrampicati sul pero" style="object-position: 50% 0%">
+                        <div class="animale-foto foto-intera" style="--sfondo: url('immagini%20sito/gatti.jpg')">
+                            <img src="immagini%20sito/gatti.jpg" alt="I due gatti della fattoria arrampicati sul pero">
+                        </div>
                         <span class="tag">La famiglia</span>
                         <h3>[Altri animali]</h3>
                         <p>[Se avete cane, gatti o altri animali, presentateli qui. Altrimenti questo riquadro si toglie.]</p>
