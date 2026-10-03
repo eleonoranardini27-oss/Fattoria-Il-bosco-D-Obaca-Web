@@ -826,6 +826,11 @@
     </footer>
 
     <script>
+        // All'apertura il sito parte sempre dall'inizio (la hero), invece di
+        // tornare al punto in cui si era lasciata la pagina
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        if (!location.hash) window.scrollTo(0, 0);
+
         // Menu mobile
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
