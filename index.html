@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fattoria Il Bosco D'Obaca | Cassetta di verdura, frutta e uova a km 0 a Vellano (Pescia)</title>
     <meta name="description" content="Fattoria a Vellano, nella Svizzera Pesciatina (Pescia, PT): ortaggi di stagione, frutta, more e uova colorate di galline allevate all'aperto. Ordina la cassetta: ritiro in fattoria o consegna in zona.">
+    <link rel="canonical" href="https://eleonoranardini27-oss.github.io/Fattoria-Il-bosco-D-Obaca-Web/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="it_IT">
     <meta property="og:site_name" content="Fattoria Il Bosco D'Obaca">
-    <meta property="og:title" content="Fattoria Il Bosco D'Obaca | Verdura, frutta e uova a km 0 a Vellano (Pescia)">
+    <meta property="og:title" content="Fattoria Il Bosco D'Obaca | Cassetta di verdura, frutta e uova a km 0 a Vellano (Pescia)">
     <meta property="og:description" content="Fattoria a Vellano, nella Svizzera Pesciatina (Pescia, PT): ortaggi di stagione, frutta, more e uova colorate di galline allevate all'aperto. Ordina la cassetta: ritiro in fattoria o consegna in zona.">
-    
+    <meta property="og:url" content="https://eleonoranardini27-oss.github.io/Fattoria-Il-bosco-D-Obaca-Web/">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,291 +21,21 @@
     <!-- FontAwesome (icone social e menu) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        :root {
-            --carta: #EDE4D3;      /* fondo carta */
-            --sabbia: #D9CBB0;     /* fondo sezioni chiare / testo su scuro */
-            --bosco: #2F3A2A;      /* verde bosco */
-            --terra: #6E4B2E;      /* marrone terra */
-            --inchiostro: #2A241C; /* testo e footer */
-            --testo-2: #4A3F30;    /* testo secondario */
-            --oro: #C9A15A;        /* accento */
-            --serif: 'Cormorant Garamond', Georgia, serif;
-            --body: 'Lora', Georgia, serif;
-        }
-        *, *::before, *::after { box-sizing: border-box; }
-        html { scroll-behavior: smooth; scroll-padding-top: 96px; }
-        body {
-            margin: 0;
-            font-family: var(--body);
-            color: var(--inchiostro);
-            line-height: 1.7;
-            background-color: var(--carta);
-            background-image:
-                repeating-linear-gradient(0deg, rgba(110,75,46,0.035) 0 1px, transparent 1px 4px),
-                repeating-linear-gradient(90deg, rgba(110,75,46,0.03) 0 1px, transparent 1px 5px);
-        }
-        img { max-width: 100%; display: block; }
-        a { color: var(--bosco); }
-        a:hover { color: var(--terra); }
-        h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; margin: 0; line-height: 1.1; }
-        p { margin: 0; }
-
-        .wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-        .eyebrow { font-size: 12px; letter-spacing: 5px; text-transform: uppercase; color: var(--terra); }
-        .on-dark .eyebrow, .eyebrow.oro { color: var(--oro); }
-        .divider { display: flex; align-items: center; gap: 16px; width: 220px; color: var(--terra); }
-        .divider span { flex: 1; height: 1px; background: currentColor; }
-
-        .btn {
-            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-            text-decoration: none; font-family: var(--body); font-size: 13px; font-weight: 600;
-            letter-spacing: 2.5px; text-transform: uppercase; padding: 16px 30px;
-            border: 1px solid transparent; cursor: pointer; transition: background-color .2s, color .2s;
-        }
-        .btn-oro { background: var(--oro); color: #1E1A12; }
-        .btn-oro:hover { background: #b88f48; color: #1E1A12; }
-        .btn-bosco { background: var(--bosco); color: var(--carta); }
-        .btn-bosco:hover { background: #222b1e; color: var(--carta); }
-        .btn-chiaro { border-color: #F3ECDD; color: #F3ECDD; }
-        .btn-chiaro:hover { background: rgba(243,236,221,0.12); color: #F3ECDD; }
-
-        /* ---------- HEADER ---------- */
-        .site-header {
-            position: sticky; top: 0; z-index: 50;
-            background-color: rgba(237,228,211,0.96);
-            backdrop-filter: blur(6px);
-        }
-        .header-row {
-            display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px;
-            padding: 14px 0; border-bottom: 1px solid var(--terra);
-        }
-        .nav { display: flex; gap: 22px; flex-wrap: nowrap; white-space: nowrap; align-items: center;
-               font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600; }
-        .nav a { text-decoration: none; }
-        .nav-right { justify-content: flex-end; }
-        .nav .btn { padding: 12px 18px; font-size: 12px; }
-        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .brand img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 1px solid var(--terra); background: #fff; }
-        .brand-name { display: block; font-family: var(--serif); font-weight: 700; font-size: 24px; color: var(--bosco); line-height: 1.05; }
-        .brand-sub { display: block; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--terra); }
-        .menu-btn { display: none; background: none; border: 1px solid var(--terra); color: var(--bosco);
-                    width: 44px; height: 44px; font-size: 18px; cursor: pointer; justify-self: end; }
-        .mobile-menu { display: none; border-bottom: 1px solid var(--terra); padding: 8px 0 20px; }
-        .mobile-menu.open { display: block; }
-        .mobile-menu a { display: block; padding: 12px 0; text-decoration: none; font-size: 13px; letter-spacing: 2.5px;
-                         text-transform: uppercase; font-weight: 600; border-bottom: 1px solid rgba(110,75,46,0.25); }
-        .mobile-menu .btn { margin-top: 16px; width: 100%; border-bottom: 0; color: var(--carta); }
-
-        /* ---------- HERO ---------- */
-        .hero { padding-top: 28px; }
-        .hero-box {
-            position: relative; min-height: 620px; display: flex; flex-direction: column; align-items: center;
-            justify-content: center; text-align: center; padding: 72px 32px 88px; color: #F3ECDD;
-            overflow: hidden; background: #4A5A3C;
-        }
-        .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
-        .hero-box::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(rgba(30,26,18,0.45), rgba(30,26,18,0.68)); }
-        .hero-box > *:not(.hero-bg) { position: relative; z-index: 2; }
-        .hero-box > .hero-caption { position: absolute; }
-        .hero-logo { width: 132px; height: 132px; border-radius: 50%; object-fit: cover;
-                     border: 1px solid #F3ECDD; outline: 1px solid rgba(243,236,221,0.5); outline-offset: 6px; margin-bottom: 26px; }
-        .hero h1 { margin: 14px 0 20px; font-size: clamp(2.5rem, 6vw, 4.4rem); line-height: 1.04; max-width: 900px; }
-        .hero h1 em { font-weight: 500; color: var(--sabbia); }
-        .hero p { font-size: 18px; max-width: 640px; color: var(--carta); margin-bottom: 32px; }
-        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
-        .hero-caption { position: absolute; bottom: 18px; left: 0; right: 0; font-size: 13px; font-style: italic; color: rgba(243,236,221,0.85); }
-
-        /* ---------- FILOSOFIA ---------- */
-        .section { padding: 104px 0 96px; }
-        .center-head { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; max-width: 820px; margin: 0 auto; }
-        .center-head h2 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: var(--bosco); }
-        .center-head h2 em { font-weight: 500; color: var(--terra); }
-        .center-head p { font-size: 18px; color: var(--testo-2); }
-        .principi { display: flex; flex-wrap: wrap; margin-top: 56px; border-top: 1px solid var(--terra); border-bottom: 1px solid var(--terra); }
-        .principi div { flex: 1 1 240px; padding: 36px 28px; display: flex; flex-direction: column; gap: 10px; }
-        .principi div + div { border-left: 1px solid rgba(110,75,46,0.35); }
-        .principi .num { font-family: var(--serif); font-size: 34px; color: var(--terra); line-height: 1; }
-        .principi strong { font-family: var(--serif); font-size: 25px; color: var(--bosco); font-weight: 600; }
-        .principi span:last-child { font-size: 15px; }
-
-        .pratica-head { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; margin-bottom: 48px; }
-        .pratica-head > div:first-child { flex: 1 1 340px; display: flex; flex-direction: column; gap: 14px; }
-        .pratica-head h2 { font-size: clamp(2rem, 4vw, 2.8rem); color: var(--bosco); }
-        .pratica-testo { flex: 1 1 520px; display: flex; flex-direction: column; gap: 16px; font-size: 17px; }
-        .pratica-grid { display: flex; flex-wrap: wrap; gap: 28px; }
-        .pratica-card { flex: 1 1 300px; background: #F6F0E4; border: 1px solid var(--terra); padding: 36px 30px; display: flex; flex-direction: column; gap: 12px; }
-        .pratica-card h3, .animale h3 { font-size: 28px; color: var(--bosco); }
-        .animale p { font-size: 15px; }
-        .pratica-card p, .animale p { font-size: 16px; }
-        .tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); }
-        .galleria { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; }
-        .galleria img { object-fit: cover; border: 1px solid var(--terra); width: 100%; }
-        .galleria .grande { flex: 2 1 420px; width: auto; height: 420px; min-width: 0; }
-        .galleria .piccole { flex: 1 1 260px; display: grid; grid-template-rows: 1fr 1fr; grid-template-columns: 1fr 1fr; gap: 16px; height: 420px; }
-        .galleria .piccole .alta { grid-row: span 2; }
-        .galleria .piccole img { height: 100%; min-height: 0; }
-        .on-paglia { background: #E3D8C2; border-top: 1px solid var(--terra); }
-        .animali-grid { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 48px; }
-        .animale { flex: 1 1 320px; display: flex; flex-direction: column; gap: 14px; }
-        .segnaposto { display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; font-size: 13px; color: var(--inchiostro); border: 1px solid var(--terra); }
-        .pratica-foto { height: 220px; margin: -36px -30px 8px; border-width: 0 0 1px; }
-        img.pratica-foto { display: block; width: calc(100% + 60px); max-width: none; object-fit: cover; border-bottom: 1px solid var(--terra); }
-        .animale-foto { height: 300px; }
-        img.animale-foto { display: block; width: 100%; object-fit: cover; border: 1px solid var(--terra); }
-        .foto-intera { position: relative; overflow: hidden; border: 1px solid var(--terra); }
-        .foto-intera::before { content: ""; position: absolute; inset: -20px; background: var(--sfondo) center / cover; filter: blur(14px) brightness(0.85); }
-        .foto-intera img { position: relative; display: block; width: 100%; height: 100%; object-fit: contain; }
-        .dettagli { border-top: 1px solid rgba(110,75,46,0.35); padding-top: 14px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-style: italic; color: var(--terra); }
-        .nota { margin: 40px auto 0; text-align: center; font-size: 15px; font-style: italic; color: var(--terra); max-width: 720px; }
-
-        /* ---------- PRODOTTI ---------- */
-        .on-dark { background: var(--bosco); color: var(--carta); }
-        .on-paglia .split-head { border-bottom-color: var(--terra); margin-bottom: 0; }
-        .on-paglia .split-head p { color: var(--inchiostro); }
-        .on-paglia .split-head h2 { color: var(--bosco); }
-        .on-dark a:not(.btn) { color: var(--carta); }
-        .split-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px;
-                      border-bottom: 1px solid rgba(237,228,211,0.4); padding-bottom: 28px; margin-bottom: 56px; }
-        .split-head h2 { font-size: clamp(2.2rem, 4.5vw, 3.2rem); margin-top: 10px; }
-        .split-head p { max-width: 440px; font-size: 16px; color: var(--sabbia); }
-        .prodotti-grid { display: flex; flex-wrap: wrap; gap: 36px; }
-        .prodotto { flex: 1 1 300px; display: flex; flex-direction: column; gap: 16px; }
-        .prodotto .foto { height: 340px; border: 1px solid rgba(237,228,211,0.4); overflow: hidden; position: relative; }
-        .prodotto .foto img { width: 100%; height: 100%; object-fit: cover; }
-        .badge { position: absolute; top: 14px; right: 14px; background: var(--carta); color: var(--bosco);
-                 font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600; padding: 6px 12px; }
-        .prodotto .tag { color: var(--oro); }
-        .prodotto h4 { font-size: 30px; }
-        .prodotto p { font-size: 15px; color: var(--sabbia); }
-        .prodotto .link { border-top: 1px solid rgba(237,228,211,0.3); padding-top: 12px; font-size: 14px; font-style: italic; text-decoration: none; }
-        .prodotto .link:hover { color: var(--oro) !important; }
-        .sub-title { display: flex; align-items: baseline; gap: 16px; margin: 0 0 28px; font-size: 28px; }
-        .sub-title .num { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; font-family: var(--body); color: var(--oro); }
-        .futuri { margin-top: 80px; }
-        .futuri-grid { display: flex; flex-wrap: wrap; gap: 28px; }
-        .futuro { flex: 1 1 380px; border: 1px dashed rgba(237,228,211,0.5); padding: 30px 28px; display: flex; flex-direction: column; gap: 10px; }
-        .futuro .stato { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--oro); }
-        .futuro h4 { font-size: 26px; }
-        .futuro p { font-size: 15px; color: var(--sabbia); }
-        .center-cta { display: flex; justify-content: center; margin-top: 56px; }
-
-        /* ---------- CHI SIAMO ---------- */
-        .azienda { display: flex; flex-wrap: wrap; gap: 64px; align-items: center; }
-        .azienda-foto { flex: 1 1 420px; display: flex; flex-direction: column; gap: 14px; }
-        .azienda-foto .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-        .azienda-foto img { width: 100%; height: 400px; object-fit: cover; border: 1px solid var(--terra); }
-        .azienda-foto img.azienda-coppia { height: 320px; object-position: center 30%; }
-        .azienda-foto .grid2 img:last-child { margin-top: 48px; }
-        .azienda-foto figcaption { font-size: 13px; font-style: italic; color: var(--terra); }
-        .azienda-testo { flex: 1 1 440px; display: flex; flex-direction: column; gap: 20px; }
-        .azienda-testo h2 { font-size: clamp(2rem, 4vw, 3rem); color: var(--bosco); line-height: 1.08; }
-        .azienda-testo p { font-size: 17px; }
-        .azienda-testo blockquote { margin: 8px 0 0; padding: 4px 0 4px 24px; border-left: 1px solid var(--terra);
-                                    font-family: var(--serif); font-style: italic; font-size: 25px; line-height: 1.35; color: var(--testo-2); }
-        .azienda-testo blockquote cite { display: block; margin-top: 8px; font-family: var(--body); font-style: normal;
-                                         font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); }
-        .registro { display: flex; flex-direction: column; margin-top: 12px; border-top: 1px solid var(--terra); }
-        .registro div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(110,75,46,0.35); }
-        .registro div span:first-child { font-family: var(--serif); font-size: 21px; color: var(--bosco); }
-        .registro div span:last-child { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--terra); }
-
-        /* ---------- ORDINA ---------- */
-        .on-sabbia { background: var(--sabbia); }
-        .on-sabbia .center-head { margin-bottom: 48px; }
-        .on-sabbia .center-head h2 { font-size: clamp(2rem, 4vw, 3rem); }
-        .passi { display: flex; flex-wrap: wrap; gap: 28px; }
-        .passo { flex: 1 1 280px; background: var(--carta); border: 1px solid var(--terra); padding: 32px 28px; display: flex; flex-direction: column; gap: 10px; }
-        .passo .num { font-family: var(--serif); font-size: 48px; line-height: 1; color: var(--terra); }
-        .passo h3 { font-size: 24px; color: var(--bosco); }
-        .passo p { font-size: 15px; }
-        .ordine { display: flex; flex-wrap: wrap; gap: 48px; margin-top: 64px; padding: 48px 40px; background: var(--carta); border: 1px solid var(--terra); }
-        .ordine-info { flex: 1 1 380px; display: flex; flex-direction: column; gap: 18px; }
-        .ordine-info h3 { font-size: clamp(1.9rem, 3.5vw, 2.5rem); color: var(--bosco); }
-        .ordine-info ul { list-style: none; margin: 4px 0 0; padding: 0; border-top: 1px solid rgba(110,75,46,0.35); }
-        .ordine-info li { padding: 12px 0; border-bottom: 1px solid rgba(110,75,46,0.35); font-size: 15px; }
-        .ordine-info li strong { color: var(--bosco); }
-        .ordine-info .btn { align-self: flex-start; margin-top: 8px; }
-        form#order-form { flex: 1 1 380px; display: flex; flex-direction: column; gap: 18px; }
-        .campo label { display: block; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600; color: var(--testo-2); margin-bottom: 6px; }
-        .campo input, .campo select, .campo textarea {
-            width: 100%; font-family: var(--body); font-size: 15px; color: var(--inchiostro);
-            background: #F6F0E4; border: 1px solid rgba(110,75,46,0.5); border-radius: 0; padding: 12px 14px; min-height: 46px;
-        }
-        .campo input:focus, .campo select:focus, .campo textarea:focus { outline: 2px solid var(--bosco); outline-offset: 0; border-color: var(--bosco); }
-        .campi2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-        form#order-form .btn { width: 100%; }
-        #form-success { display: none; border: 1px solid var(--bosco); background: #E3E6D6; color: var(--bosco); padding: 14px 16px; font-size: 15px; }
-        #form-success.show { display: block; }
-
-        /* ---------- FAQ ---------- */
-        .faq { margin-top: 104px; }
-        .faq .center-head { margin-bottom: 40px; }
-        .faq .center-head h3 { font-size: clamp(2rem, 4vw, 2.8rem); color: var(--bosco); }
-        .faq-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 56px; border-top: 1px solid var(--terra); }
-        .faq-item { padding: 24px 0; border-bottom: 1px solid rgba(110,75,46,0.35); }
-        .faq-item h4 { font-size: 23px; color: var(--bosco); margin-bottom: 8px; }
-        .faq-item p { font-size: 15px; color: var(--testo-2); }
-
-        /* ---------- CONTATTI ---------- */
-        .contatti { display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start; }
-        .contatti-testo { flex: 1 1 460px; display: flex; flex-direction: column; gap: 18px; }
-        .contatti-testo h2 { font-size: clamp(2rem, 4vw, 3rem); color: var(--bosco); }
-        .contatti-testo p { font-size: 17px; }
-        .contatti-lista { flex: 1 1 360px; border-top: 1px solid var(--terra); }
-        .contatti-lista > div { padding: 18px 0; border-bottom: 1px solid rgba(110,75,46,0.35); display: flex; flex-direction: column; gap: 4px; }
-        .contatti-lista .label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--terra); }
-        .contatti-lista .valore { font-family: var(--serif); font-size: 22px; color: var(--bosco); }
-        .social { display: flex; gap: 22px; flex-wrap: wrap; font-size: 15px; }
-        .social a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
-
-        /* ---------- FOOTER ---------- */
-        .site-footer { background: var(--inchiostro); color: var(--sabbia); }
-        .site-footer a { color: var(--carta); text-decoration: none; }
-        .site-footer a:hover { color: var(--oro); }
-        .footer-top { display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start; padding: 64px 0 40px; }
-        .footer-brand { display: flex; align-items: center; gap: 16px; }
-        .footer-brand img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; background: #fff; }
-        .footer-brand strong { display: block; font-family: var(--serif); font-size: 28px; color: var(--carta); line-height: 1.1; }
-        .footer-brand span { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; }
-        .footer-col { display: flex; flex-direction: column; gap: 6px; font-size: 15px; }
-        .footer-col .label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--oro); }
-        .footer-nav { display: flex; flex-direction: column; gap: 4px; }
-        .footer-bottom { padding: 18px 0 32px; border-top: 1px solid rgba(217,203,176,0.25); font-size: 12px; color: #B9A988; }
-
-        /* ---------- RESPONSIVE ---------- */
-        @media (max-width: 1100px) {
-            .nav { display: none; }
-            .menu-btn { display: inline-flex; align-items: center; justify-content: center; }
-            .header-row { grid-template-columns: 1fr auto; }
-            .brand img { width: 52px; height: 52px; }
-            .brand-name { font-size: 21px; }
-        }
-        @media (max-width: 720px) {
-            .wrap { padding: 0 16px; }
-            .section { padding: 72px 0 64px; }
-            .hero-box { min-height: 540px; padding: 56px 20px 80px; }
-            .hero-logo { width: 104px; height: 104px; }
-            .hero p { font-size: 16px; }
-            .prodotto .foto { height: 260px; }
-            .galleria .grande { height: 260px; flex-basis: 100%; }
-            .galleria .piccole { height: auto; grid-template-rows: none; grid-template-columns: 1fr 1fr; }
-            .galleria .piccole .alta { height: 416px; }
-            .galleria .piccole img { height: 200px; }
-            .azienda-foto img { height: 260px; }
-            .azienda-foto img.azienda-coppia { height: 220px; }
-            .azienda-foto .grid2 img:last-child { margin-top: 24px; }
-            .ordine { padding: 28px 18px; }
-            .campi2, .faq-grid { grid-template-columns: 1fr; }
-            .btn { width: 100%; }
-            .hero-actions { width: 100%; }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/style.css">
+    <script>
+        (function () {
+            var vecchi = { chisiamo: 'fattoria.html', filosofia: 'fattoria.html#filosofia', animali: 'animali.html',
+                           prodotti: 'prodotti.html', ordina: 'ordina.html', faq: 'ordina.html#faq', contatti: 'contatti.html' };
+            var dest = vecchi[location.hash.slice(1)];
+            if (dest) location.replace(dest);
+        })();
+    </script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Fattoria Il Bosco D'Obaca",
+  "url": "https://eleonoranardini27-oss.github.io/Fattoria-Il-bosco-D-Obaca-Web/",
   "description": "Piccola fattoria a Vellano, nella Svizzera Pesciatina: ortaggi di stagione, frutta, more e uova colorate di galline allevate all'aperto. Cassetta settimanale con ritiro in fattoria o consegna in zona.",
   "address": {
     "@type": "PostalAddress",
@@ -314,90 +46,12 @@
     "addressCountry": "IT"
   },
   "founder": [
-    {
-      "@type": "Person",
-      "name": "Eleonora"
-    },
-    {
-      "@type": "Person",
-      "name": "Valentin"
-    }
+    { "@type": "Person", "name": "Eleonora" },
+    { "@type": "Person", "name": "Valentin" }
   ],
   "vatID": "IT02138000472",
   "paymentAccepted": "Contanti, Satispay, POS",
   "keywords": "cassetta verdura km 0, ortaggi di stagione, uova colorate, more, fattoria Vellano, Svizzera Pesciatina, Pescia"
-}
-    </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Dove si trova la Fattoria Il Bosco D'Obaca?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A Vellano, in Via Obaca 4, 51012 Pescia (PT), tra le colline della Svizzera Pesciatina in Toscana."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Cosa c'è nella cassetta?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Gli ortaggi di stagione raccolti nel nostro orto a Vellano: la composizione cambia ogni settimana in base al raccolto. Puoi chiedere di aggiungere uova o altri prodotti disponibili scrivendolo nelle note dell'ordine."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Posso personalizzare la cassetta?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sì, in parte. Per allergie o preferenze particolari scrivilo nelle note dell'ordine: faremo il possibile per venire incontro alle tue esigenze."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "C'è un vincolo o abbonamento?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, nessun vincolo e nessun abbonamento: ordini la cassetta solo quando ne hai bisogno."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Posso ritirare la cassetta in fattoria?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sì. Puoi ritirarla in fattoria a Vellano, in Via Obaca, oppure scegliere la consegna a domicilio in zona."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Come posso pagare?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "In contanti oppure con pagamento digitale (Satispay o POS), al ritiro in fattoria o alla consegna."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Perché le vostre uova sono colorate?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Il colore del guscio dipende dalla razza della gallina: alcune razze depongono uova azzurre o verdi, altre marroni o nocciola. Le nostre galline vivono all'aperto a Vellano."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quando saranno pronti i formaggi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Non appena completata la stalla e l'allestimento del laboratorio aziendale previsto dal bando di sviluppo. Iscriviti ai nostri canali social per seguire i lavori!"
-      }
-    }
-  ]
 }
     </script>
 </head>
@@ -407,38 +61,34 @@
         <div class="wrap">
             <div class="header-row">
                 <nav class="nav" aria-label="Menu principale">
-                    <a href="#chisiamo">Chi siamo</a>
-                    <a href="#prodotti">Prodotti</a>
-                    <a href="#filosofia">Filosofia</a>
-                    <a href="#animali">Animali</a>
+                    <a href="index.html" aria-current="page">Home</a>
+                    <a href="fattoria.html">La Fattoria</a>
+                    <a href="animali.html">Animali</a>
                 </nav>
-                <a href="#home" class="brand">
+                <a href="index.html" class="brand">
                     <img src="logo.jpeg" alt="Logo Fattoria Il Bosco D'Obaca">
                     <span>
                         <span class="brand-name">Il Bosco D'Obaca</span>
                         <span class="brand-sub">Fattoria · Vellano</span>
                     </span>
                 </a>
-                <nav class="nav nav-right" aria-label="Menu ordini e contatti">
-                    <a href="#ordina">Come ordinare</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contatti">Contatti</a>
-                    <a href="#ordina" class="btn btn-bosco">Ordina</a>
+                <nav class="nav nav-right" aria-label="Menu prodotti, contatti e ordini">
+                    <a href="prodotti.html">Prodotti</a>
+                    <a href="contatti.html">Contatti</a>
+                    <a href="ordina.html" class="btn btn-bosco">Ordina</a>
                 </nav>
                 <button id="menu-btn" class="menu-btn" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobile-menu">
                     <i class="fa-solid fa-bars" aria-hidden="true"></i>
                 </button>
             </div>
-            <div id="mobile-menu" class="mobile-menu">
-                <a href="#chisiamo" class="mobile-link">Chi siamo</a>
-                <a href="#prodotti" class="mobile-link">Prodotti</a>
-                <a href="#filosofia" class="mobile-link">Filosofia</a>
-                <a href="#animali" class="mobile-link">Animali</a>
-                <a href="#ordina" class="mobile-link">Come ordinare</a>
-                <a href="#faq" class="mobile-link">FAQ</a>
-                <a href="#contatti" class="mobile-link">Contatti</a>
-                <a href="#ordina" class="btn btn-bosco mobile-link">Ordina la cassetta</a>
-            </div>
+            <nav id="mobile-menu" class="mobile-menu" aria-label="Menu">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="fattoria.html">La Fattoria</a>
+                <a href="animali.html">Animali</a>
+                <a href="prodotti.html">Prodotti</a>
+                <a href="contatti.html">Contatti</a>
+                <a href="ordina.html" class="btn btn-bosco">Ordina la cassetta</a>
+            </nav>
         </div>
     </header>
 
@@ -453,86 +103,88 @@
                     <h1>Benvenuti in Fattoria: <em>cibi sani, genuini e coltivati secondo natura</em></h1>
                     <p>Siamo una piccola fattoria a Vellano, nella Svizzera Pesciatina (Pescia, PT). Coltiviamo ortaggi di stagione, frutta e more con metodi naturali e alleviamo galline all'aperto che depongono uova colorate. Ordini la cassetta settimanale e la ritiri in fattoria o la ricevi a casa.</p>
                     <div class="hero-actions">
-                        <a href="#ordina" class="btn btn-oro">Ordina la cassetta</a>
-                        <a href="#chisiamo" class="btn btn-chiaro">Chi siamo</a>
+                        <a href="ordina.html" class="btn btn-oro">Ordina la cassetta</a>
+                        <a href="fattoria.html" class="btn btn-chiaro">Chi siamo</a>
                     </div>
                     <span class="hero-caption">I nostri prati e boschi a Vellano, Svizzera Pesciatina</span>
                 </div>
             </div>
         </section>
 
-        <!-- CHI SIAMO -->
-        <section id="chisiamo" class="section">
+        <!-- CHI SIAMO IN BREVE -->
+        <section class="section">
             <div class="wrap azienda">
-                <figure class="azienda-foto" style="margin: 0">
-                    <img loading="lazy" class="azienda-coppia" src="immagini%20sito/eleonora%20e%20valentin.jpg" alt="Eleonora e Valentin sorridenti con in braccio una gallina e un gallo della fattoria">
-                    <div class="grid2">
-                        <img loading="lazy" src="immagini%20sito/eleonora%20orto.jpg" alt="Eleonora controlla i cavoli nell'orto pacciamato sotto la rete">
-                        <img loading="lazy" src="immagini%20sito/valentin%20capra.jpg" alt="Valentin accarezza una delle capre della fattoria">
-                    </div>
+                <figure class="intro-foto">
+                    <img loading="lazy" src="immagini%20sito/eleonora%20e%20valentin.jpg" alt="Eleonora e Valentin sorridenti con in braccio una gallina e un gallo della fattoria" style="object-position: 50% 30%">
                     <figcaption>Eleonora e Valentin in fattoria, Via Obaca, Vellano</figcaption>
                 </figure>
                 <div class="azienda-testo">
                     <span class="eyebrow">Chi siamo</span>
-                    <h2>Chi siamo: una giovane fattoria a Vellano costruita con le nostre mani</h2>
+                    <h2>Una giovane fattoria a Vellano costruita con le nostre mani</h2>
                     <p>Siamo <strong>Eleonora e Valentin</strong>: viviamo e lavoriamo a Vellano, nel cuore della Svizzera Pesciatina, dove stiamo dando vita passo dopo passo alla nostra fattoria. Abbiamo scelto di costruire da zero la nostra realtà agricola, rigenerando la terra e recuperando un antico castagneto abbandonato.</p>
-                    <div class="registro">
-                        <div><span>Recupero del castagneto</span><span>In corso</span></div>
-                        <div><span>Orto e pollaio</span><span>Attivi</span></div>
-                        <div><span>Stalla per 30 capre da latte</span><span>In progetto</span></div>
-                        <div><span>Caseificio aziendale</span><span>In progetto</span></div>
+                    <div class="azioni">
+                        <a href="fattoria.html" class="btn btn-bosco">Scopri la fattoria</a>
+                        <a href="fattoria.html#filosofia" class="link-more">Come lavoriamo →</a>
                     </div>
-                    <a href="#contatti" class="btn btn-bosco" style="align-self: flex-start">Vieni a conoscerci in fattoria</a>
                 </div>
             </div>
         </section>
 
-        <!-- FILOSOFIA IN PRATICA -->
-        <section id="filosofia" class="section" style="border-top: 1px solid var(--terra)">
+        <!-- PRODOTTI IN BREVE -->
+        <section class="section on-dark">
             <div class="wrap">
-                <div class="pratica-head">
+                <div class="split-head">
                     <div>
-                        <span class="eyebrow">La filosofia, in pratica</span>
-                        <h2>Cosa vuol dire, per noi, rispettare la natura</h2>
+                        <span class="eyebrow">Dalla terra alla tavola</span>
+                        <h2>I nostri prodotti a km 0</h2>
                     </div>
-                    <div class="pratica-testo">
-                        <p>Vuol dire accettare che sia la terra a dettare i tempi, e non il contrario. Coltiviamo quello che la stagione permette, lasciamo agli animali lo spazio e i ritmi di cui hanno bisogno, e ci prendiamo cura del bosco che ci circonda.</p>
-                        <p>È una scelta che a volte significa produrre meno. Ma è l'unico modo che conosciamo per lasciare questa terra più fertile di come l'abbiamo trovata.</p>
-                    </div>
+                    <p>Ortaggi, frutta, more e uova coltivati e raccolti a Vellano. Ogni settimana una cassetta diversa, secondo quello che la stagione ci regala.</p>
                 </div>
-                <div class="pratica-grid">
-                    <div class="pratica-card">
-                        <img loading="lazy" class="pratica-foto" src="immagini%20sito/orto%20cavoli.jpg" alt="File di cavoli nell'orto pacciamato con paglia, sotto la rete di protezione">
-                        <span class="tag">Nell'orto</span>
-                        <h3>La terra prima del raccolto</h3>
-                        <p>Nutriamo la terra con compost, sovescio e letame delle nostre galline e capre. Gestiamo le erbe con pacciamatura di fieno che mantiene il terreno umido e soffice, ricco di vita.</p>
-                    </div>
-                    <div class="pratica-card">
-                        <img loading="lazy" class="pratica-foto" src="immagini%20sito/capre%20pascolo.jpg" alt="Le nostre capre al pascolo sul prato ai margini del bosco">
-                        <span class="tag">Con gli animali</span>
-                        <h3>Spazio, aria, tempo</h3>
-                        <p>I nostri animali vivono liberi nei pascoli di Vellano dal mattino al tramonto, nutrendosi solo di erba fresca, germogli e granaglie selezionate.</p>
-                    </div>
-                    <div class="pratica-card">
-                        <img loading="lazy" class="pratica-foto" src="immagini%20sito/castagne.jpg" alt="Ricci aperti con castagne mature sui rami del castagneto">
-                        <span class="tag">Nel bosco</span>
-                        <h3>Recuperare</h3>
-                        <p>Stiamo riportando in vita un antico castagneto abbandonato, un albero alla volta.</p>
-                    </div>
+                <div class="prodotti-grid">
+                    <article class="prodotto">
+                        <div class="foto">
+                            <img loading="lazy" src="immagini%20sito/cassetta%20orto.jpg" alt="Cesto di verdure di stagione e uova della Fattoria Il Bosco D'Obaca a Vellano" style="object-position: 50% 70%">
+                        </div>
+                        <span class="tag">N° 01 · Orto</span>
+                        <h3 class="h4">Le Cassette dell'Orto</h3>
+                        <p>Ortaggi freschi di stagione coltivati con metodi totalmente naturali e sostenibili nei nostri campi a Vellano.</p>
+                        <a href="prodotti.html#orto" class="link">Scopri la cassetta →</a>
+                    </article>
+                    <article class="prodotto">
+                        <div class="foto">
+                            <img loading="lazy" src="immagini%20sito/kiwi.jpg" alt="Kiwi che maturano sulla pianta tra le foglie" style="object-position: 50% 55%">
+                        </div>
+                        <span class="tag">N° 02 · Bosco e frutteto</span>
+                        <h3 class="h4">Frutta di stagione e more di bosco</h3>
+                        <p>Frutta locale di stagione e deliziose more mature raccolte direttamente dai nostri alberi e roveti nel bosco.</p>
+                        <a href="prodotti.html#frutta" class="link">Scopri il raccolto →</a>
+                    </article>
+                    <article class="prodotto">
+                        <div class="foto">
+                            <img loading="lazy" src="immagini%20sito/uova%20colorate.jpg" alt="Uova colorate azzurre, verdi, marroni e nocciola di galline allevate all'aperto">
+                        </div>
+                        <span class="tag">N° 03 · Pollaio</span>
+                        <h3 class="h4">Uova Fresche Colorate</h3>
+                        <p>Uova dal guscio azzurro/verde, marrone e nocciola prodotte da galline felici allevate all'aperto all'aria di montagna.</p>
+                        <a href="prodotti.html#uova" class="link">Scopri le uova →</a>
+                    </article>
                 </div>
-                <div class="galleria">
-                    <img loading="lazy" class="grande" src="immagini%20sito/orto%20pomodori.jpg" alt="Le file di pomodori dell'orto con le colline della Svizzera Pesciatina sullo sfondo">
-                    <div class="piccole">
-                        <img loading="lazy" class="alta" src="immagini%20sito/pomodori.jpg" alt="Pomodori allungati che maturano sulla pianta">
-                        <img loading="lazy" src="immagini%20sito/insalata.jpg" alt="Cespo di lattuga nell'orto pacciamato con fieno">
-                        <img loading="lazy" src="immagini%20sito/castagne%20raccolte.jpg" alt="Una manciata di castagne appena raccolte nel castagneto">
+
+                <div class="guida-mini">
+                    <div>
+                        <strong>Il pollaio arcobaleno</strong>
+                        <span>La nostra guida gratuita alle uova colorate: razze, freschezza, conservazione e ricette.</span>
                     </div>
+                    <a href="guide/il-pollaio-arcobaleno.pdf" class="btn btn-oro" download><i class="fa-solid fa-download" aria-hidden="true"></i> Scarica la guida</a>
+                </div>
+                <div class="sezione-cta">
+                    <a href="prodotti.html" class="link-more">Tutti i prodotti e il calendario di stagione →</a>
                 </div>
             </div>
         </section>
 
-        <!-- ANIMALI -->
-        <section id="animali" class="section on-paglia">
+        <!-- ANIMALI IN BREVE -->
+        <section class="section on-paglia">
             <div class="wrap">
                 <div class="split-head">
                     <div>
@@ -541,121 +193,37 @@
                     </div>
                     <p>Non sono numeri di un allevamento: li conosciamo uno per uno, e il loro benessere viene prima della produzione.</p>
                 </div>
-                <div class="animali-grid">
-                    <article class="animale">
-                        <img loading="lazy" class="animale-foto" src="immagini%20sito/galline.jpg" alt="Le galline e il gallo che razzolano nel recinto all'aperto">
-                        <span class="tag">Squadra Razzolamento All'Aperto</span>
-                        <h3>Le galline</h3>
-                        <p>Al comando del pollaio c'è Achille, il nostro gallo fiero e premuroso, e le sue 20 'regine' di razze diverse. Ognuna ha la sua personalità e, soprattutto, la sua specialità artistica: deporre uova dai colori tutti naturali! Dal guscio azzurro cielo e verde salvia al marrone cioccolato, nocciola e bianco perla.</p>
-                    </article>
-                    <article class="animale">
-                        <img loading="lazy" class="animale-foto" src="immagini%20sito/capra%20bianca.jpg" alt="La capra bianca e nocciola che mangia foglie di castagno" style="object-position: 50% 25%">
-                        <span class="tag">Potatrice Ecologica</span>
-                        <h3>Bianchina</h3>
-                        <p>Riservata, guardinga e con un appetito insaziabile: non si fa sfuggire nulla, nemmeno le rose del giardino!</p>
-                    </article>
-                    <article class="animale">
-                        <img loading="lazy" class="animale-foto" src="immagini%20sito/capra%20nera.jpg" alt="La capra nera che bruca l'erba sul pendio" style="object-position: 50% 42%">
-                        <span class="tag">Responsabile Arrampicate</span>
-                        <h3>Nerina</h3>
-                        <p>Affettuosa, agile e indiscutibilmente testarda: ama le coccole, ma non provate a farla rientrare in stalla finché non decide che la giornata al pascolo è davvero finita!</p>
-                    </article>
-                    <article class="animale">
-                        <div class="animale-foto foto-intera" style="--sfondo: url('immagini%20sito/gatti.jpg')">
-                            <img loading="lazy" src="immagini%20sito/gatti.jpg" alt="Pesca e Susina, le due gattine della fattoria, arrampicate sul pero">
-                        </div>
-                        <span class="tag">Cacciatrici Acrobatiche</span>
-                        <h3>Pesca e Susina</h3>
-                        <p>Due gattine avventurose e affettuose amano salire sugli alberi, anche perché è l'unico posto dove Balù non può arrivare!</p>
-                    </article>
-                    <article class="animale">
-                        <img loading="lazy" class="animale-foto" src="immagini%20sito/oche.jpg" alt="Nedo e Betti, le due oche bianche, che mangiano dalla mano" style="object-position: 50% 55%">
-                        <span class="tag">Antifurto Naturale</span>
-                        <h3>Nedo e Betti</h3>
-                        <p>Sempre all'erta e in prima linea, ci annunciano ogni arrivo con un vivace starnazzare di benvenuto e si occupano della manutenzione del prato con estrema precisione!</p>
-                    </article>
-                    <article class="animale">
-                        <img loading="lazy" class="animale-foto" src="immagini%20sito/cane.jpg" alt="Balù, il cane nero della fattoria, con gli occhi color ambra" style="object-position: 50% 35%">
-                        <span class="tag">Responsabile Della Sicurezza</span>
-                        <h3>Balù</h3>
-                        <p>Il nostro guardiano fiero. Pensa di essere il capo della fattoria e veglia su di noi con grande devozione... finché non incontra le caprette! Tra di loro è una continua guerra di sguardi e dispetti: Balù prova a fare il cane severo, ma le caprette hanno decisamente la testa più dura della sua!</p>
-                    </article>
+                <div class="anteprima-animali">
+                    <figure>
+                        <img loading="lazy" src="immagini%20sito/galline.jpg" alt="Le galline e il gallo che razzolano nel recinto all'aperto" style="object-position: 50% 30%">
+                        <figcaption><strong>Le galline</strong><span>Squadra Razzolamento All'Aperto</span></figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="immagini%20sito/capra%20bianca.jpg" alt="Bianchina, la capra bianca e nocciola, che mangia foglie di castagno" style="object-position: 50% 25%">
+                        <figcaption><strong>Bianchina</strong><span>Potatrice Ecologica</span></figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="immagini%20sito/cane.jpg" alt="Balù, il cane nero della fattoria, con gli occhi color ambra" style="object-position: 50% 35%">
+                        <figcaption><strong>Balù</strong><span>Responsabile Della Sicurezza</span></figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="immagini%20sito/gatti.jpg" alt="Pesca e Susina, le due gattine della fattoria, arrampicate sul pero" style="object-position: 50% 30%">
+                        <figcaption><strong>Pesca e Susina</strong><span>Cacciatrici Acrobatiche</span></figcaption>
+                    </figure>
                 </div>
-                <p class="nota">Le nostre due capre oggi sono in allevamento familiare: latte e formaggi arriveranno con la nuova stalla e il laboratorio aziendale.</p>
-            </div>
-        </section>
-
-        <!-- PRODOTTI -->
-        <section id="prodotti" class="section on-dark">
-            <div class="wrap">
-                <div class="split-head">
-                    <div>
-                        <span class="eyebrow">Dalla terra alla tavola</span>
-                        <h2>I nostri prodotti a km 0: cosa trovi oggi e cosa arriverà</h2>
-                    </div>
-                    <p>Ortaggi, frutta, more e uova coltivati e raccolti a Vellano, a km 0. E i progetti in arrivo: la nuova stalla per le capre e il laboratorio per i formaggi.</p>
-                </div>
-
-                <h3 class="sub-title"><span class="num">01</span> Offerta attuale</h3>
-                <div class="prodotti-grid">
-                    <article class="prodotto">
-                        <div class="foto">
-                            <img loading="lazy" src="immagini%20sito/cassetta%20orto.jpg" alt="Cesto di verdure di stagione e uova della Fattoria Il Bosco D'Obaca a Vellano" style="object-position: 50% 70%">
-                        </div>
-                        <span class="tag">N° 01 · Orto</span>
-                        <h4>Le Cassette dell'Orto</h4>
-                        <p>Ortaggi freschi di stagione coltivati con metodi totalmente naturali e sostenibili nei nostri campi a Vellano.</p>
-                        <a href="#ordina" class="link">Ordina la cassetta →</a>
-                    </article>
-                    <article class="prodotto">
-                        <div class="foto">
-                            <img loading="lazy" src="immagini%20sito/kiwi.jpg" alt="Kiwi che maturano sulla pianta tra le foglie" style="object-position: 50% 55%">
-                        </div>
-                        <span class="tag">N° 02 · Bosco e frutteto</span>
-                        <h4>Frutta di stagione e more di bosco</h4>
-                        <p>Frutta locale di stagione e deliziose more mature raccolte direttamente dai nostri alberi e roveti nel bosco.</p>
-                        <a href="#ordina" class="link">Scopri il raccolto →</a>
-                    </article>
-                    <article class="prodotto">
-                        <div class="foto">
-                            <img loading="lazy" src="immagini%20sito/uova%20colorate.jpg" alt="Uova colorate azzurre, verdi, marroni e nocciola di galline allevate all'aperto">
-                        </div>
-                        <span class="tag">N° 03 · Pollaio</span>
-                        <h4>Uova Fresche Colorate</h4>
-                        <p>Uova dal guscio azzurro/verde, marrone e nocciola prodotte da galline felici allevate all'aperto all'aria di montagna.</p>
-                        <a href="#ordina" class="link">Prenota uova →</a>
-                    </article>
-                </div>
-
-                <div class="futuri">
-                    <h3 class="sub-title"><span class="num">02</span> Progetti futuri (in cantiere – bando di sviluppo)</h3>
-                    <div class="futuri-grid">
-                        <div class="futuro">
-                            <span class="stato">In arrivo</span>
-                            <h4>La Nuova Stalla e le Caprette</h4>
-                            <p>Stalla moderna pensata per il massimo benessere animale, progettata per ospitare circa 30 capre da latte in armonia con la natura di Vellano.</p>
-                        </div>
-                        <div class="futuro">
-                            <span class="stato">In arrivo</span>
-                            <h4>Il Laboratorio e i Formaggi Artigianali</h4>
-                            <p>Caseificio aziendale per la produzione e vendita di formaggi freschi e stagionati a filiera cortissima direttamente in fattoria.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="center-cta">
-                    <a href="#ordina" class="btn btn-oro">Ordina la cassetta della settimana</a>
+                <div class="sezione-cta">
+                    <a href="animali.html" class="btn btn-bosco">Conosci tutti gli animali</a>
                 </div>
             </div>
         </section>
 
-        <!-- ORDINA -->
-        <section id="ordina" class="section on-sabbia">
+        <!-- COME ORDINARE IN BREVE -->
+        <section class="section on-sabbia">
             <div class="wrap">
                 <div class="center-head">
-                    <span class="eyebrow">Guida e ordini</span>
-                    <h2>Come ordinare la cassetta di verdura a km 0</h2>
-                    <p>Bastano 3 semplici passaggi per ricevere sulla tua tavola la genuinità dei nostri prodotti di stagione.</p>
+                    <span class="eyebrow">Come ordinare</span>
+                    <h2>La cassetta della settimana in 3 passi</h2>
+                    <p>Nessun vincolo e nessun abbonamento: ordini solo quando ne hai bisogno.</p>
                 </div>
                 <div class="passi">
                     <div class="passo">
@@ -666,7 +234,7 @@
                     <div class="passo">
                         <span class="num">02</span>
                         <h3>Invia il Tuo Ordine</h3>
-                        <p>Compila il modulo qui sotto oppure rispondi su WhatsApp indicando se preferisci il ritiro in fattoria o la consegna.</p>
+                        <p>Compila il modulo d'ordine oppure scrivici su WhatsApp indicando se preferisci il ritiro in fattoria o la consegna.</p>
                     </div>
                     <div class="passo">
                         <span class="num">03</span>
@@ -674,98 +242,20 @@
                         <p>Passa a trovarci a Vellano in Via Obaca oppure ricevi la cassetta comoda a casa con la nostra consegna locale in zona.</p>
                     </div>
                 </div>
-
-                <div class="ordine">
-                    <div class="ordine-info">
-                        <span class="eyebrow">Modulo rapido</span>
-                        <h3>Ordina la tua Cassetta della Settimana</h3>
-                        <p>Compila questo modulo per inviare il tuo ordine in modo semplice. Ti contatteremo subito per confermare la disponibilità del raccolto del giorno!</p>
-                        <ul>
-                            <li><strong>Nessun vincolo o abbonamento:</strong> ordini solo quando ne hai bisogno.</li>
-                            <li><strong>Pagamento flessibile:</strong> in contanti o digitale (Satispay/POS) al ritiro o alla consegna.</li>
-                        </ul>
-                        <a href="https://wa.me/393000000000?text=Ciao%2C%20vorrei%20ordinare%20la%20cassetta%20della%20settimana!" target="_blank" rel="noopener noreferrer" class="btn btn-bosco"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Oppure scrivici su WhatsApp</a>
-                    </div>
-
-                    <form id="order-form">
-                        <div id="form-success" role="status"><strong>Ordine inviato con successo!</strong> Eleonora e Valentin ti risponderanno al più presto.</div>
-                        <div class="campo">
-                            <label for="nome">Nome e Cognome *</label>
-                            <input type="text" id="nome" required>
-                        </div>
-                        <div class="campi2">
-                            <div class="campo">
-                                <label for="telefono">Telefono / WhatsApp *</label>
-                                <input type="tel" id="telefono" required>
-                            </div>
-                            <div class="campo">
-                                <label for="modalita">Modalità *</label>
-                                <select id="modalita">
-                                    <option value="Ritiro in fattoria (Vellano)">Ritiro in fattoria a Vellano</option>
-                                    <option value="Consegna a domicilio in zona">Consegna a domicilio in zona</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="campo">
-                            <label for="note">Note o preferenze (es. allergie, uova extra)</label>
-                            <textarea id="note" rows="3" placeholder="Es. Vorrei aggiungere un extra di uova o segnalare preferenze..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-oro">Invia ordine</button>
-                    </form>
-                </div>
-
-                <!-- FAQ -->
-                <div id="faq" class="faq">
-                    <div class="center-head">
-                        <span class="eyebrow">Domande frequenti</span>
-                        <h3>Domande frequenti sulla cassetta e sulla fattoria</h3>
-                        <p>Dove siamo, cosa c'è nella cassetta, come ordinare e pagare: le risposte alle domande più comuni.</p>
-                    </div>
-                    <div class="faq-grid">
-                        <div class="faq-item">
-                            <h4>Dove si trova la Fattoria Il Bosco D'Obaca?</h4>
-                            <p>A Vellano, in Via Obaca 4, 51012 Pescia (PT), tra le colline della Svizzera Pesciatina in Toscana.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h4>Cosa c'è nella cassetta?</h4>
-                            <p>Gli ortaggi di stagione raccolti nel nostro orto a Vellano: la composizione cambia ogni settimana in base al raccolto. Puoi chiedere di aggiungere uova o altri prodotti disponibili scrivendolo nelle note dell'ordine.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h4>Posso personalizzare la cassetta?</h4>
-                            <p>Sì, in parte. Per allergie o preferenze particolari scrivilo nelle note dell'ordine: faremo il possibile per venire incontro alle tue esigenze.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h4>C'è un vincolo o abbonamento?</h4>
-                            <p>No, nessun vincolo e nessun abbonamento: ordini la cassetta solo quando ne hai bisogno.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h4>Posso ritirare la cassetta in fattoria?</h4>
-                            <p>Sì. Puoi ritirarla in fattoria a Vellano, in Via Obaca, oppure scegliere la consegna a domicilio in zona.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h4>Come posso pagare?</h4>
-                            <p>In contanti oppure con pagamento digitale (Satispay o POS), al ritiro in fattoria o alla consegna.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h4>Perché le vostre uova sono colorate?</h4>
-                            <p>Il colore del guscio dipende dalla razza della gallina: alcune razze depongono uova azzurre o verdi, altre marroni o nocciola. Le nostre galline vivono all'aperto a Vellano.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h4>Quando saranno pronti i formaggi?</h4>
-                            <p>Non appena completata la stalla e l'allestimento del laboratorio aziendale previsto dal bando di sviluppo. Iscriviti ai nostri canali social per seguire i lavori!</p>
-                        </div>
-                    </div>
+                <div class="sezione-cta">
+                    <a href="ordina.html" class="btn btn-oro">Ordina la cassetta</a>
                 </div>
             </div>
         </section>
 
-        <!-- CONTATTI -->
-        <section id="contatti" class="section">
+        <!-- CONTATTI IN BREVE -->
+        <section class="section">
             <div class="wrap contatti">
                 <div class="contatti-testo">
-                    <span class="eyebrow">Contatti e social</span>
-                    <h2>Dove siamo: Via Obaca 4, Vellano (Pescia)</h2>
-                    <p>La nostra fattoria si trova a <strong>Vellano, in Via Obaca</strong>, tra le colline della Svizzera Pesciatina. Che tu voglia prenotare la tua cassetta dell'orto, concordare il ritiro della spesa o organizzare una visita, siamo sempre felici di accoglierti!</p>
+                    <span class="eyebrow">Dove siamo</span>
+                    <h2>Via Obaca 4, Vellano (Pescia)</h2>
+                    <p>La nostra fattoria si trova tra le colline della Svizzera Pesciatina. Che tu voglia prenotare la cassetta, concordare il ritiro o organizzare una visita, siamo sempre felici di accoglierti!</p>
+                    <a href="contatti.html" class="link-more">Mappa e contatti →</a>
                 </div>
                 <div class="contatti-lista">
                     <div>
@@ -773,15 +263,8 @@
                         <span class="valore">Via Obaca 4, 51012 Vellano – Pescia (PT)</span>
                     </div>
                     <div>
-                        <span class="label">WhatsApp e canale</span>
-                        <a class="valore" href="https://wa.me/393000000000" target="_blank" rel="noopener noreferrer">Scrivici subito un messaggio veloce</a>
-                    </div>
-                    <div>
-                        <span class="label">Seguici sui nostri canali social</span>
-                        <div class="social">
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram</a>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook</a>
-                        </div>
+                        <span class="label">WhatsApp</span>
+                        <a class="valore" href="https://wa.me/393000000000" target="_blank" rel="noopener noreferrer">Scrivici un messaggio</a>
                     </div>
                 </div>
             </div>
@@ -801,15 +284,17 @@
                 <div class="footer-col">
                     <span class="label">Dove siamo</span>
                     <span>Via Obaca 4, 51012 Vellano – Pescia (PT)</span>
+                    <a href="guide/il-pollaio-arcobaleno.pdf" download>Guida gratuita alle uova colorate (PDF)</a>
                 </div>
                 <div class="footer-col">
                     <span class="label">Pagine</span>
                     <nav class="footer-nav" aria-label="Menu a piè di pagina">
-                        <a href="#home">Home</a>
-                        <a href="#chisiamo">Chi siamo</a>
-                        <a href="#prodotti">Prodotti</a>
-                        <a href="#ordina">Come ordinare</a>
-                        <a href="#contatti">Contatti</a>
+                        <a href="index.html">Home</a>
+                        <a href="fattoria.html">La Fattoria</a>
+                        <a href="animali.html">Animali</a>
+                        <a href="prodotti.html">Prodotti</a>
+                        <a href="ordina.html">Ordina</a>
+                        <a href="contatti.html">Contatti</a>
                     </nav>
                 </div>
                 <div class="footer-col">
@@ -824,36 +309,6 @@
             <div class="footer-bottom">&copy; 2026 Fattoria Il Bosco D'Obaca · P.IVA 02138000472 · Tutti i diritti riservati.</div>
         </div>
     </footer>
-
-    <script>
-        // All'apertura il sito parte sempre dall'inizio (la hero), invece di
-        // tornare al punto in cui si era lasciata la pagina
-        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-        if (!location.hash) window.scrollTo(0, 0);
-
-        // Menu mobile
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            const open = mobileMenu.classList.toggle('open');
-            menuBtn.setAttribute('aria-expanded', open);
-        });
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('open');
-                menuBtn.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        // Invio modulo d'ordine (simulato)
-        const orderForm = document.getElementById('order-form');
-        const formSuccess = document.getElementById('form-success');
-        orderForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            formSuccess.classList.add('show');
-            orderForm.reset();
-            setTimeout(() => formSuccess.classList.remove('show'), 6000);
-        });
-    </script>
+    <script src="assets/script.js"></script>
 </body>
 </html>

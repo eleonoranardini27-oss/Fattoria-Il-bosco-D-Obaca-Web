@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eleonoranardini27-oss.github.io/Fattoria-Il-bosco-D-Obaca-Web/sitemap.xml
