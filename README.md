@@ -25,3 +25,9 @@ Online su GitHub Pages: https://eleonoranardini27-oss.github.io/Fattoria-Il-bosc
 
 Il numero compare in `assets/script.js` (costante `WHATSAPP`, usata dal modulo d'ordine)
 e nei link `https://wa.me/...` delle pagine HTML: va cambiato in tutti questi punti.
+
+## Modalità "presto disponibile"
+
+Per ora la vendita non è attiva: pulsanti e testi dicono "presto disponibile" e il modulo d'ordine è disattivato.
+La versione con gli ordini attivi è il commit `3c501fa`: quando si potrà vendere, si riparte da lì
+(ad esempio annullando con `git revert` il commit che ha introdotto la modalità "presto disponibile").
