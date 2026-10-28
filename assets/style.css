@@ -124,6 +124,17 @@ p { margin: 0; }
 .on-paglia { background: #E3D8C2; border-top: 1px solid var(--terra); }
 .animali-grid { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 48px; }
 .animale { flex: 1 1 320px; display: flex; flex-direction: column; gap: 14px; }
+/* Le galline in evidenza a tutta larghezza: gli altri 6 animali stanno in righe complete */
+.animale.in-evidenza { flex-basis: 100%; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); grid-template-rows: 1fr auto 1fr; column-gap: 40px; row-gap: 14px; }
+.animale.in-evidenza p { align-self: start; }
+.animale.in-evidenza .animale-foto { grid-column: 1; grid-row: 1 / span 3; height: 380px; }
+.animale.in-evidenza > :not(.animale-foto) { grid-column: 2; }
+.animale.in-evidenza .tag { align-self: end; }
+@media (max-width: 720px) {
+    .animale.in-evidenza { display: flex; }
+    .animale.in-evidenza .animale-foto { height: 300px; }
+    .animale.in-evidenza .tag, .animale.in-evidenza p { align-self: auto; }
+}
 .segnaposto { display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; font-size: 13px; color: var(--inchiostro); border: 1px solid var(--terra); }
 .pratica-foto { height: 220px; margin: -36px -30px 8px; border-width: 0 0 1px; }
 img.pratica-foto { display: block; width: calc(100% + 60px); max-width: none; object-fit: cover; border-bottom: 1px solid var(--terra); }
@@ -302,7 +313,7 @@ form#order-form .btn { width: 100%; }
 .intro-foto figcaption { font-size: 13px; font-style: italic; color: var(--terra); }
 
 /* Home: anteprima animali */
-.anteprima-animali { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 48px; }
+.anteprima-animali { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; margin-top: 48px; }
 .anteprima-animali figure { margin: 0; display: flex; flex-direction: column; gap: 12px; }
 .anteprima-animali img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border: 1px solid var(--terra); }
 .anteprima-animali figcaption { display: flex; flex-direction: column; gap: 2px; }
@@ -358,6 +369,8 @@ form#order-form .btn { width: 100%; }
 @media (max-width: 1000px) {
     .calendario { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .anteprima-animali { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .anteprima-animali .in-evidenza { grid-column: 1 / -1; }
+    .anteprima-animali .in-evidenza img { aspect-ratio: 16 / 9; }
 }
 @media (max-width: 720px) {
     .page-hero .hero-box { min-height: 300px; padding: 48px 20px 56px; }
