@@ -1,5 +1,5 @@
 // Numero WhatsApp della fattoria (prefisso internazionale, senza + e senza spazi)
-const WHATSAPP = '393000000000';
+const WHATSAPP = '393394360559';
 
 // All'apertura le pagine partono sempre dall'inizio, invece di tornare
 // al punto in cui si era lasciata la pagina
