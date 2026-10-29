@@ -1,7 +1,7 @@
 # Fattoria-Il-bosco-D-Obaca-Web
 Sito web per l'azienda agricola a conduzione familiare
 
-Online su GitHub Pages: https://eleonoranardini27-oss.github.io/Fattoria-Il-bosco-D-Obaca-Web/
+Online su GitHub Pages: https://www.fattoriailboscodobaca.it/
 
 ## Pagine
 
