@@ -21,7 +21,7 @@ body {
         repeating-linear-gradient(0deg, rgba(110,75,46,0.035) 0 1px, transparent 1px 4px),
         repeating-linear-gradient(90deg, rgba(110,75,46,0.03) 0 1px, transparent 1px 5px);
 }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: var(--bosco); }
 a:hover { color: var(--terra); }
 h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; margin: 0; line-height: 1.1; }

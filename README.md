@@ -20,6 +20,10 @@ Online su GitHub Pages: https://www.fattoriailboscodobaca.it/
 - `assets/script.js`: menu da telefono, modulo d'ordine su WhatsApp, mese in corso nel calendario
 - `immagini sito/`: le foto del sito
 - `guide/il-pollaio-arcobaleno.pdf`: la guida gratuita alle uova colorate
+- `404.html`: la pagina "non trovata" che GitHub Pages mostra per gli indirizzi sbagliati (non indicizzata)
+- `robots.txt` e `sitemap.xml`: per Google; quando aggiungi una pagina, aggiungila anche alla sitemap
+
+Ogni `<img>` ha `width` e `height` con le misure reali della foto: se sostituisci una foto, aggiorna anche questi due numeri.
 
 ## Numero WhatsApp
 
